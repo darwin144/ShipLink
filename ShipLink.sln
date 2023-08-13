@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API_ShipLink", "API_ShipLink\API_ShipLink.csproj", "{06451984-9375-471C-93AD-585E73CF2B20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client_Shiplink", "Client-Shiplink\Client_Shiplink.csproj", "{CA225293-667C-479E-B6DD-5452B22EC8FA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{06451984-9375-471C-93AD-585E73CF2B20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06451984-9375-471C-93AD-585E73CF2B20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06451984-9375-471C-93AD-585E73CF2B20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06451984-9375-471C-93AD-585E73CF2B20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA225293-667C-479E-B6DD-5452B22EC8FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA225293-667C-479E-B6DD-5452B22EC8FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA225293-667C-479E-B6DD-5452B22EC8FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA225293-667C-479E-B6DD-5452B22EC8FA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8C9923F0-94A5-4B4C-BCA6-4C01A5AEE3CA}
+	EndGlobalSection
+EndGlobal

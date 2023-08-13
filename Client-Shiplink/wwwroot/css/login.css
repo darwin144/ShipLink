@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.custom-navbar {
+  background: linear-gradient(45deg, rgba(217, 4, 41, 1), rgba(217, 4, 41, 0.8), rgba(217, 4, 41, 0.64), rgba(217, 4, 41, 0.56), rgba(217, 4, 41, 0.48), rgba(217, 4, 41, 0.32), rgba(217, 4, 41, 0.2), rgba(217, 4, 41, 0));
+}
+
+/* Ganti warna teks menjadi putih untuk seluruh kelas navbar */
+.navbar.navbar-expand-lg.custom-navbar .nav-item.nav-link,
+.navbar.navbar-expand-lg.custom-navbar .navbar-brand,
+.navbar.navbar-expand-lg.custom-navbar .navbar-toggler-icon,
+.navbar.navbar-expand-lg.custom-navbar .dropdown-item,
+.navbar.navbar-expand-lg.custom-navbar .nav-item.dropdown .dropdown-toggle {
+  color: white;
+}
+.login {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login .form-login {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 40px;
+}
+
+.text-red-clr {
+  color: rgba(204, 0, 25, 1);
+}
+
+.bg-red-clr {
+  background-color: rgba(204, 0, 25, 1);
+  color: white;
+}
+
+/* footer */
+.support {
+  background-color: #e6e6e6;
+}
+.copyright {
+  background: rgba(46, 46, 46, 1);
+  color: white;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+  width: 100%;
+}
+/* footer */

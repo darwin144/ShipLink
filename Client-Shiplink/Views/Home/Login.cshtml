@@ -1,0 +1,147 @@
+﻿@model Client_Shiplink.ViewModel.LoginVM
+
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <link href="~/lib/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/login.css" rel="stylesheet" />
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg custom-navbar fixed-top">
+        <div class="container">
+            <a href="/" class="navbar-brand">ShipLink</a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav w-100 d-flex justify-content-between" style="padding: 0px 40px">
+                    <a href="#" class="nav-item nav-link active">Cross-Border Mailbox</a>
+                    <a href="#" class="nav-item nav-link">Shipping Labels</a>
+                    <a href="#" class="nav-item nav-link">Shipping Supplies</a>
+                    <a href="#" class="nav-item nav-link">About Us</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">EN</a>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item">Inbox</a>
+                            <a href="#" class="dropdown-item">Sent</a>
+                            <a href="#" class="dropdown-item">Drafts</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="navbar-nav d-flex align-items-center gap-4">
+                    <a href="../register" class="nav-item nav-link border rounded-2 border-light" style="padding: 8px 40px">Register</a>
+                    <a href="" class="nav-item nav-link border rounded-2 bg-danger border-danger" style="padding: 8px 40px">Login</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="container login">
+        <div class="w-50 h-50">
+            <h3 class="text-center" style="color: rgba(0, 80, 157, 1)">Welcome Back</h3>
+            <h1 class="text-center" style="margin-bottom: 40px">Log In to start saving!</h1>
+            <form asp-action ="Login" class="form-login shadow text-left">
+                <div class="form-group">
+                    <label for="Email">Email </label>
+                    <input asp-for="Email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input asp-for="Password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+                        <label class="form-check-label" for="exampleCheck1">Remember Me</label>
+                    </div>
+                    <p class="text-red-clr">Forgot Password</p>
+                </div>
+                <button type="submit" value="Login" class="btn bg-red-clr">Submit</button>
+                <div>Don’t have an account? <a class="text-red-clr" href="../register/">Sign up now</a></div>
+            </form>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="container-fluid support">
+        <div class="container d-flex justify-content-between align-items-center" style="padding: 40px 0px">
+            <div class="d-flex flex-column" style="gap: 34px">
+                <h1 class="text-red-clr">ShipLink</h1>
+                <div>
+                    <p>Email Support</p>
+                    <div class="d-flex align-items-center gap-2">
+                        <img src="../assets/img/email-logo.png" alt="email Logo" srcset="" />
+                        <div>Email Support</div>
+                    </div>
+                </div>
+                <div>
+                    <p>Follow Us</p>
+                    <div class="d-flex align-items-center gap-2">
+                        <img src="../assets/img/facebook-logo.png" alt="fecebook Logo" srcset="" />
+                        <img src="../assets/img/twitter-logo.png" alt="twitter Logo" srcset="" />
+                        <img src="../assets/img/instagram-logo.png" alt="instagram Logo" srcset="" />
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex" style="gap: 80px">
+                <div class="">
+                    <div class="d-flex gap-2">
+                        <p class="text-red-clr">></p>
+                        <p>about</p>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <p class="text-red-clr">></p>
+                        <p>Support</p>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <p class="text-red-clr">></p>
+                        <p>Membership</p>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <p class="text-red-clr">></p>
+                        <p>How it works</p>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="d-flex gap-2">
+                        <p class="text-red-clr">></p>
+                        <p>Shipping Calculator</p>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <p class="text-red-clr">></p>
+                        <p>Prohibited Items</p>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <p class="text-red-clr">></p>
+                        <p>Contact</p>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <p class="text-red-clr">></p>
+                        <p>Info</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid copyright">
+            <div class="container d-flex">
+                <p class="w-25">© 2023 ShipLink.ca</p>
+                <div class="d-flex w-50" style="gap: 48px; margin-left: 80px;">
+                    <p>Terms and Conditions</p>
+                    <div>|</div>
+                    <p>Privacy Policy</p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </footer>
+
+    <!-- Footer -->
+    <script src="~/lib/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
