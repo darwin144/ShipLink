@@ -43,7 +43,7 @@ namespace API_ShipLink.Repository
                 {
                     User_Id = e.Id.ToString(),
                     Email = e.Email,
-                    FullName = String.Concat(e.Firstname, " ", e.Lastname),
+                    FullName = String.Concat(e.Name),
                 }).FirstOrDefaultAsync(e => e.Email == email);
                 return account;
             }
@@ -81,11 +81,10 @@ namespace API_ShipLink.Repository
                 {
                     var user = new User
                     {
-                        Firstname = register.Firstname,
-                        Lastname = register.Lastname,
+                        Name = register.Name,
                         Email = register.Email,
                         Phone = register.Phone,
-                        Address = register.Address,
+                        Country = register.Country,
                         Password = register.Password,
                     };
                     var result = _userRepository.CreateWithValidate(user);

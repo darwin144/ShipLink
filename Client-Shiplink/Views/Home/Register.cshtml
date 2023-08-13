@@ -1,5 +1,6 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+﻿@model Client_Shiplink.ViewModel.RegisterVM
+
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -45,40 +46,42 @@
         <div class="">
             <h3 class="text-center" style="color: rgba(0, 80, 157, 1)">Save money, save time, take control of your deliveries.</h3>
             <h1 class="text-center" style="margin-bottom: 40px">Sign up to send and save instantly.</h1>
-            <form class="form-register shadow text-left">
+            <form asp-action="Register" class="form-register shadow text-left">
                 <div class="form-group">
-                    <label for="exampleInputEmail1">your name </label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
+                    <label for="exampleInputEmail1">Full Name </label>
+                    <input asp-for="Name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputPassword1">I plan to use Sendle for</label>
+                    <label for="exampleInputPassword1">I plan to use Sendle for</label>                
                     <div class="d-flex justify-content-between gap-4">
+@*                        <label asp-for="user_Type" class="control-label"></label>*@
                         <div class="w-50 form-plan">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
-                            <label class="form-check-label" for="flexRadioDefault1"> Business </label>
-                        </div>
+                            <label class="form-check-label" for="flexRadioDefault1"> Business </label> 
+                            <input asp-for="user_Type" class="form-check-input" type="radio" name="user_type" id="user" value="Business" />
+                            </div>
                         <div class="form-plan w-50">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked />
                             <label class="form-check-label" for="flexRadioDefault2"> Personal </label>
+                            <input asp-for="user_Type" class="form-check-input" type="radio" name="user_type" id="user" value="Personal" />
                         </div>
-                    </div>
+@*                        <span asp-validation-for="user_Type" class="text-danger"></span>
+*@                    </div>
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Country</label>
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Australia</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                    <select asp-for="Country" class="form-select" aria-label="Default select example">
+                        <option value="Australia">Australia</option>
+                        <option value="United States">United Stated</option>
+                        <option value="Canada">Canada</option>
+                        <option value="Japan">Japan</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">Email</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="" />
+                    <input asp-for="Email" type="text" class="form-control" id="exampleInputPassword1" placeholder="" />
                 </div>
-                <div class="form-group">
+              <div class="form-group">
                     <label for="exampleInputPassword1">password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="" />
+                    <input asp-for="Password" class="form-control" id="exampleInputPassword1" placeholder="" />
                     <label for="">Must be at least 8 characters</label>
                 </div>
 
@@ -88,7 +91,7 @@
                 </div>
 
                 <button type="submit" class="btn bg-red-clr">Get My Free Account</button>
-                <div>Already have an account? <a class="text-red-clr" href="../login/" style="cursor: pointer">Login up now</a></div>
+                <div>Already have an account? <a class="text-red-clr" href="/Home/login/" style="cursor: pointer">Login up now</a></div>
             </form>
         </div>
     </section>
@@ -169,4 +172,4 @@
     <script src="~/lib/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
-</html>
+

@@ -61,6 +61,30 @@ namespace Client_Shiplink.Controllers
         {
             return View();
         }
+        
+        [HttpPost]
+        public async Task<IActionResult> Register(RegisterVM registerVM)
+        {
+            var result = await _repository.Registers(registerVM);
+
+            if (result is null)
+            {
+                return RedirectToAction("Error", "Home");
+            }
+            else if (result.Code == 409)
+            {
+                ModelState.AddModelError(string.Empty, result.Message);
+                TempData["Error"] = $"Something Went Wrong! - {result.Message}!";
+                return View();
+            }
+            else if (result.Code == 200)
+            {
+                TempData["Success"] = $"Data has been Successfully Registered! - {result.Message}!";
+                return RedirectToAction("Login", "Home");
+            }
+            return RedirectToAction("Index", "Home");
+        }
+
         public IActionResult Dashboard()
         {
             return View();

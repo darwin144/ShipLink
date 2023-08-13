@@ -26,12 +26,12 @@ namespace API_ShipLink.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Firstname = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Lastname = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    phone = table.Column<string>(type: "nvarchar(20)", nullable: false),
-                    Address = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    phone = table.Column<string>(type: "nvarchar(20)", nullable: true),
+                    Country = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    User_type = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -124,7 +124,8 @@ namespace API_ShipLink.Migrations
                 name: "IX_users_Email_phone",
                 table: "users",
                 columns: new[] { "Email", "phone" },
-                unique: true);
+                unique: true,
+                filter: "[phone] IS NOT NULL");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
