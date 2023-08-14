@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Client_Shiplink</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Client_Shiplink.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+         <nav class="navbar navbar-expand-lg custom-navbar fixed-top">
+        <div class="container">
+            <a href="/" class="navbar-brand" style="color: white;">ShipLink</a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav w-100 d-flex justify-content-between" style="padding: 0px 40px">
+                    <a href="#" class="nav-item nav-link active" style="color: white;">Cross-Border Mailbox</a>
+                    <a href="#" class="nav-item nav-link" style="color: white;">Shipping Labels</a>
+                    <a href="#" class="nav-item nav-link" style="color: white;">Shipping Supplies</a>
+                    <a href="#" class="nav-item nav-link" style="color: white;">About Us</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" style="color: white;">EN</a>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item">Inbox</a>
+                            <a href="#" class="dropdown-item">Sent</a>
+                            <a href="#" class="dropdown-item">Drafts</a>
+                        </div>
+                    </div>
+                </div>
+                    <div class="navbar-nav d-flex align-items-center gap-4">
+                   <a href="~/Home/Register" class="nav-item nav-link border rounded-2 border-light" style="padding: 8px 40px; color: white; ">Register</a>
+                        <a href="~/Home/Login" class="nav-item nav-link border rounded-2 bg-danger border-danger" style="padding: 8px 40px; color: white;">Login</a>
+                    </div>
+            </div>
+        </div>
+    </nav>
+    </header>
+    <div  style="position: relative;">
+        <main role="main" >
+            @RenderBody()
+        </main>
+    </div>
+
+   <footer class="support">
+        <div class="container d-flex justify-content-between align-items-center" style="padding: 40px 0px">
+            <div class="d-flex flex-column" style="gap: 34px">
+                <h1 class="text-red-clr">ShipLink</h1>
+                <div>
+                    <p>Email Support</p>
+                    <div class="d-flex align-items-center gap-2">
+                        <img src="../assets/img/email-logo.png" alt="email Logo" srcset="" />
+                        <div>Email Support</div>
+                    </div>
+                </div>
+                <div>
+                    <p>Follow Us</p>
+                    <div class="d-flex align-items-center gap-2">
+                        <img src="../assets/img/facebook-logo.png" alt="fecebook Logo" srcset="" />
+                        <img src="../assets/img/twitter-logo.png" alt="twitter Logo" srcset="" />
+                        <img src="../assets/img/instagram-logo.png" alt="instagram Logo" srcset="" />
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex" style="gap: 80px">
+                <div class="">
+                    <div class="d-flex gap-2">
+                        <p class="text-red-clr">></p>
+                        <p>about</p>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <p class="text-red-clr">></p>
+                        <p>Support</p>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <p class="text-red-clr">></p>
+                        <p>Membership</p>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <p class="text-red-clr">></p>
+                        <p>How it works</p>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="d-flex gap-2">
+                        <p class="text-red-clr">></p>
+                        <p>Shipping Calculator</p>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <p class="text-red-clr">></p>
+                        <p>Prohibited Items</p>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <p class="text-red-clr">></p>
+                        <p>Contact</p>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <p class="text-red-clr">></p>
+                        <p>Info</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid copyright">
+            <div class="container d-flex">
+                <p class="w-25">© 2023 ShipLink.ca</p>
+                <div class="d-flex w-50" style="gap: 48px; margin-left: 80px;">
+                    <p>Terms and Conditions</p>
+                    <div>|</div>
+                    <p>Privacy Policy</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

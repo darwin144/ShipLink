@@ -1,0 +1,55 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+body {
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+}
+
+.custom-navbar {
+  background: linear-gradient(45deg, rgba(217, 4, 41, 1), rgba(217, 4, 41, 0.8), rgba(217, 4, 41, 0.64), rgba(217, 4, 41, 0.56), rgba(217, 4, 41, 0.48), rgba(217, 4, 41, 0.32), rgba(217, 4, 41, 0.2), rgba(217, 4, 41, 0));
+}
+
+/* /* a {
+  color: #0077cc;
+} 
+/*  */
+/* .btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+} */
+
+/* 
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+} */
+
+/* .border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+} */
+
+/* .box-shadow {
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
+} */
+
+.support {
+  background-color: #e6e6e6;
+  position: relative;
+}
+.copyright {
+  background: rgba(46, 46, 46, 1);
+  color: white;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+  width: 100%;
+}
