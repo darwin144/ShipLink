@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <link href="~/lib/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/contact.css" rel="stylesheet" />
+
+</head>
+<body>
+    <section class="container contact">
+        <div class="w-50">
+            <h3 class="text-center" style="color: rgba(0, 80, 157, 1); font-size:20px; ">Contact Us</h3>
+            <h1 class="text-center"  style="margin-bottom: 40px; font-size: 32px;">Reach out and we'll get in touch within 24 hours.</h1>
+           <form class="form-contact text-left" id="contact-form">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required class="form-control" placeholder="Enter name" />
+        </div>
+        <div class="form-group">
+            <label for="name">Email</label>
+            <input type="text" id="email" name="email" required class="form-control" placeholder="Enter Email" />
+        </div>
+        <div class="form-group">
+            <label for="name">Subject</label>
+            <input type="text" id="subject" name="subject" required class="form-control" placeholder="Enter subject" />
+        </div>
+        <div class="form-group">
+            <label for="name">Message</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Enter Message" ></textarea>
+        </div>
+        <button type="submit" class="btn bg-red-clr">Send Message</button>
+    </form>
+        </div>
+    </section>
+    <section class="container-fluid border-top  " style="padding:56px 0px;">
+        <div class="container d-flex " style="gap:56px; padding:40px; background: #FAFAFA;
+">
+        <div class="border-end " style="width: 40%;">
+            <div class="d-flex text-blue-clr align-items-center" style="gap:20px;">
+                <img src="../Assets/imghome/maps.png" alt="Icon Maps" />
+                <div style="color: rgba(0, 80, 157, 1); font-size:20px;  font-weight: 600;">Terminal</div>
+            </div>
+            <h1 style=" margin-top:20px; font-size: 32px;">Visit Our Terminals</h1>
+        </div>
+       <div style="width: 60%;">
+            <div>
+            <h2 style="font-size:20px;">Varennes, Qc</h2>
+            <p>3020A Rte Marie-Victorin, Varennes, Quebec J3X 0J5, Canada</p>
+            </div>
+           <div class="border-top pt-3 ">
+            <h2 style="font-size:20px;">Mooers, NY</h2>
+            <p>1706 US-11, Varennes, Quebec J3X 0J5, Canada</p>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section class="container-fluid border-top  " style="padding:56px 0px;">
+        <div class="container d-flex " style="gap:56px; padding:40px; background: #FAFAFA;
+">
+        <div class="border-end " style="width: 40%;">
+            <div class="d-flex text-blue-clr align-items-center" style="gap:20px;">
+                <img src="../Assets/imghome/Email-blue.png" alt="Icon Maps" />
+                <div style="color: rgba(0, 80, 157, 1); font-size:20px;  font-weight: 600;">Email</div>
+            </div>
+            <h1 style=" margin-top:20px; font-size: 32px;">Email support</h1>
+        </div>
+       <div style="width: 60%;">
+            <h2 style="font-size:20px;">Support@shiplink.ca</h2>
+            <p>Lorem ipsum dolor sit amet consectetur. Tortor ultricies a sed nunc semper justo faucibus et. </p>
+        </div>
+        </div>
+    </section>
+   
+    <script src="~/lib/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -6,7 +6,7 @@ body {
   width: 100%;
   height: 100vh;
   background: #000;
-  background-image: url('../Assets/img/img-header.png');
+  background-image: url('../Assets/imghome/img-header.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -107,7 +107,7 @@ body {
 }
 
 .freeacount {
-  background-image: url('../assets/img/waves.png');
+  background-image: url('../Assets/imghome/waves.png');
   padding: 80px 0px;
 }
 .freeacount-content {
@@ -115,7 +115,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url('../assets/img/img-freeacount.png');
+  background-image: url('../Assets/imghome/img-freeacount.png');
   color: white;
   border-radius: 8px;
 }
@@ -136,7 +136,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url('../assets/img/img-signup.png');
+  background-image: url('../Assets/imghome/img-signup.png');
   color: white;
   border-radius: 8px;
 }
@@ -159,6 +159,7 @@ body {
 .choose .choose-card {
   background: rgba(255, 255, 255, 0.02);
   padding: 20px;
+  width: 30%;
 }
 
 .partner {

@@ -15,8 +15,8 @@
 <body>
     <section class="container register">
         <div class="w-50">
-            <h3 class="text-center" style="color: rgba(0, 80, 157, 1)">Save money, save time, take control of your deliveries.</h3>
-            <h1 class="text-center" style="margin-bottom: 40px">Sign up to send and save instantly.</h1>
+            <h3 class="text-center" style="color: rgba(0, 80, 157, 1); font-size:20px; ">Save money, save time, take control of your deliveries.</h3>
+            <h1 class="text-center" style="margin-bottom: 40px; font-size: 32px;">Sign up to send and save instantly.</h1>
            <form class="form-register shadow text-left" id="registration-form">
         <div class="form-group">
             <label for="name">Your Name</label>
@@ -63,50 +63,7 @@
         </div>
     </section>
 
-    <script>
-        document.getElementById("registration-form").addEventListener("submit", function (event) {
-            event.preventDefault();
-
-            const name = document.getElementById("name").value;
-            const plan = document.querySelector('input[name="flexRadioDefault"]:checked').value;
-            const country = document.getElementById("country").value;
-            const email = document.getElementById("email").value;
-            const password = document.getElementById("password").value;
-            const agreedToTerms = document.getElementById("agreedToTerms").checked;
-
-            const formData = {
-                name: name,
-                plan: plan,
-                country: country,
-                email: email,
-                password: password,
-                agreedToTerms: agreedToTerms
-            };
-
-            // Kirim data ke API menggunakan metode POST
-            fetch("", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(formData)
-            })
-            .then(response => response.json())
-            .then(data => {
-                // Handle response from API
-                if (data.message) {
-                    alert(data.message); // Show success message
-                } else {
-                    alert("Registration failed"); // Show error message
-                }
-            })
-            .catch(error => {
-                console.error("Error:", error);
-                alert("An error occurred during registration.");
-            });
-        });
-    </script>
+      
     <script src="~/lib/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 </html>

@@ -1,0 +1,21 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
+.shippinglabels {
+  padding: 80px 0px;
+}
+.text-blue-clr {
+  color: #00509d;
+}
+
+.text-red-clr {
+  color: #d90429;
+}
+
+.bg-red-clr {
+  background: #d9042914;
+}
+
+.bg-blue-clr {
+  background: #00509d14;
+}

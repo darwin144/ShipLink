@@ -22,6 +22,22 @@ namespace Client_Shiplink.Controllers
         {
             return View();
         }
+        public IActionResult Shippinglabels()
+        {
+            return View();
+        }
+        public IActionResult Shippingsupplies()
+        {
+            return View();
+        }
+        public IActionResult Aboutus()
+        {
+            return View();
+        }
+        public IActionResult Contact()
+        {
+            return View();
+        }
 
         public IActionResult Login()
         {
