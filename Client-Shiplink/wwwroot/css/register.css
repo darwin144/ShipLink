@@ -10,24 +10,26 @@ body {
   overflow-x: hidden;
 }
 
-.custom-navbar {
-  background: linear-gradient(45deg, rgba(217, 4, 41, 1), rgba(217, 4, 41, 0.8), rgba(217, 4, 41, 0.64), rgba(217, 4, 41, 0.56), rgba(217, 4, 41, 0.48), rgba(217, 4, 41, 0.32), rgba(217, 4, 41, 0.2), rgba(217, 4, 41, 0));
-}
-
-/* Ganti warna teks menjadi putih untuk seluruh kelas navbar */
-.navbar.navbar-expand-lg.custom-navbar .nav-item.nav-link,
-.navbar.navbar-expand-lg.custom-navbar .navbar-brand,
-.navbar.navbar-expand-lg.custom-navbar .navbar-toggler-icon,
-.navbar.navbar-expand-lg.custom-navbar .dropdown-item,
-.navbar.navbar-expand-lg.custom-navbar .nav-item.dropdown .dropdown-toggle {
-  color: white;
-}
 .register {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 80px 0px;
+}
+.register .form {
+  width: 90%;
+}
+
+@media (min-width: 768px) {
+  .register .form {
+    width: 70%;
+  }
+}
+@media (min-width: 992px) {
+  .register .form {
+    width: 50%;
+  }
 }
 
 .register .form-register {

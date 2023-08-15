@@ -37,15 +37,21 @@ body {
 }
 
 .membership {
-  padding: 80px 0px;
+  padding: 40px 10px;
+}
+@media (min-width: 768px) {
+  .membership {
+    padding: 80px 0px;
+  }
 }
 .membership h3 {
   font-size: 20px;
   color: rgba(0, 80, 157, 1);
 }
 
-.card {
-  height: 550px;
+.membership .card {
+  width: 100%;
+  height: auto;
 }
 
 .card-title {
@@ -75,11 +81,10 @@ body {
   color: white;
   background-color: rgba(0, 80, 157, 1);
   border-radius: 4px;
-  margin-top: 56px;
 }
 
 .cross {
-  padding: 80px 0px 0px 0px;
+  padding: 20px 0px;
   background: linear-gradient(98.3deg, rgba(235, 235, 235, 0.27) -10.71%, rgba(0, 61, 165, 0) 93.17%);
 }
 .cross .content-one {
@@ -87,23 +92,32 @@ body {
   gap: 40px;
   justify-content: space-between;
 }
-
+.cross-mailbox {
+  gap: 10px;
+}
 .text-blue {
   color: rgba(0, 80, 157, 1);
   font-size: 32px;
   font-weight: 600;
 }
 .cross .content-two {
-  padding: 40px 0px;
+  padding: 20px 0px;
 }
 
 .cross .cross-card {
-  padding: 20px;
+  padding: 10px 20px;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
+  width: 100%;
   background: rgba(255, 255, 255, 1);
+}
+@media (min-width: 768px) {
+  .cross .cross-card {
+    padding: 20px;
+    gap: 20px;
+  }
 }
 
 .freeacount {
@@ -111,34 +125,57 @@ body {
   padding: 80px 0px;
 }
 .freeacount-content {
-  padding: 56px;
+  padding: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-image: url('../Assets/imghome/img-freeacount.png');
   color: white;
-  border-radius: 8px;
+}
+@media (min-width: 768px) {
+  .freeacount-content {
+    padding: 56px;
+  }
 }
 .shippinglabels {
-  padding: 80px 0px;
+  padding: 40px 0px;
   stroke: rgba(231, 232, 236, 1);
   background: linear-gradient(98.3deg, rgba(235, 235, 235, 0.27) -10.71%, rgba(0, 61, 165, 0) 93.17%), linear-gradient(0deg, #e7e8ec, #e7e8ec);
 }
 
 .shippinglabels .shippinglabels-content {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   padding: 40px 0px;
   gap: 40px;
 }
+.shippinglabels .shippinglabels-content .shipping-card {
+  width: 100%;
+  gap: 20px;
+}
 .shippinglabels .shippinglabels-singup {
-  padding: 56px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-image: url('../Assets/imghome/img-signup.png');
   color: white;
-  border-radius: 8px;
+}
+
+@media (min-width: 768px) {
+  .shippinglabels .shippinglabels-content .shipping-card {
+    width: 100%;
+    gap: 32px;
+  }
+  .shippinglabels .shippinglabels-singup {
+    padding: 56px;
+  }
+}
+@media (min-width: 992px) {
+  .shippinglabels .shippinglabels-content {
+    flex-direction: row;
+  }
 }
 
 .choose {
@@ -159,7 +196,7 @@ body {
 .choose .choose-card {
   background: rgba(255, 255, 255, 0.02);
   padding: 20px;
-  width: 30%;
+  width: 100%;
 }
 
 .partner {

@@ -13,13 +13,13 @@
 </head>
 <body>
     <header>
-         <nav class="navbar navbar-expand-lg custom-navbar fixed-top">
+         <nav class="navbar navbar-expand-lg custom-navbar  navbar-dark fixed-top ">
         <div class="container">
             <a href="/" class="navbar-brand" style="color: white;">ShipLink</a>
-            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+          <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbar">
                 <div class="navbar-nav w-100 d-flex justify-content-between" style="padding: 0px 40px">
                     <a href="#" class="nav-item nav-link active" style="color: white;">Cross-Border Mailbox</a>
                     <a href="~/Home/Shippinglabels" class="nav-item nav-link" style="color: white;">Shipping Labels</a>
@@ -49,8 +49,8 @@
     </div>
 
    <footer class="support">
-        <div class="container d-flex justify-content-between align-items-center" style="padding: 40px 0px">
-            <div class="d-flex flex-column" style="gap: 34px">
+        <div class="container d-flex flex-column flex-lg-row justify-content-between align-items-lg-center" >
+            <div class="d-flex flex-column footer-ship" >
                 <h1 class="text-red-clr">ShipLink</h1>
                 <div>
                     <p>Email Support</p>
@@ -110,7 +110,7 @@
         <div class="container-fluid copyright">
             <div class="container d-flex">
                 <p class="w-25">© 2023 ShipLink.ca</p>
-                <div class="d-flex w-50" style="gap: 48px; margin-left: 80px;">
+                <div class="d-flex w-50 terms" >
                     <p>Terms and Conditions</p>
                     <div>|</div>
                     <p>Privacy Policy</p>

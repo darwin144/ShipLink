@@ -1,16 +1,21 @@
 ﻿@model Client_Shiplink.ViewModel.LoginVM
 
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login Page</title>
-    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <title>Register</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <link href="~/lib/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="~/css/login.css" rel="stylesheet" />
 </head>
 <body>
     <section class="container login">
-        <div class="w-50 h-50">
+        <div class="form">
             <h3 class="text-center" style="color: rgba(0, 80, 157, 1); font-size: 20px;">Welcome Back</h3>
             <h1 class="text-center"  style="margin-bottom: 40px; font-size: 32px;">Log In to start saving!</h1>
             <form asp-action ="Login" class="form-login shadow text-left">
@@ -34,7 +39,8 @@
             </form>
         </div>
     </section>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+       <script src="~/lib/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
+</html>
