@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Client_Shiplink</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/dashboardLayout.css">
+    <link rel="stylesheet" href="~/Client_Shiplink.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="header">
+           <div class="d-flex gap-2 align-items-center justify-content-center  ">
+            <h2>Ship</h2>
+            <img src="../Assets/imgdashboard/arrow-down.png" alt="Arrow Down" class="arrow-down" srcset="">
+           </div>
+           <div class="d-flex gap-2 align-items-center justify-content-center  ">
+            <h2>Track</h2>
+            <img src="../Assets/imgdashboard/arrow-down.png" alt="Arrow Down" class="arrow-down" srcset="">
+           </div>
+           <div class="d-flex gap-2 align-items-center justify-content-center  ">
+            <h2>Support</h2>
+            <img src="../Assets/imgdashboard/arrow-down.png" alt="Arrow Down" class="arrow-down" srcset="">
+           </div>
+           <div class="d-flex gap-2 align-items-center justify-content-center  ">
+            <h2>Support</h2>
+            <img src="../Assets/imgdashboard/arrow-down.png" alt="Arrow Down" class="arrow-down" srcset="">
+           </div>
+           <div class="d-flex gap-2 align-items-center justify-content-center  ">
+            <img src="../Assets/imgdashboard/user.png" alt="user" style="width: 30px; height: 30px;">
+            <div>
+            <div class="fw-bold">User</div>
+            <div>Premium</div>
+            </div>
+            <img src="../Assets/imgdashboard/arrow-down.png" alt="Arrow Down" class="arrow-down" srcset="">
+           </div>
+           <div class="d-flex gap-2 align-items-center justify-content-center  ">
+            <img src="../Assets/imgdashboard/flag-uk.png" alt="user" style="width: 24px; height: 24px;">
+            <h2>ENG</h2>
+            <img src="../Assets/imgdashboard/arrow-down.png" alt="Arrow Down" class="arrow-down" srcset="">
+           </div>
+    </div>
+    <div class="wrapper">
+    <div class="sidebar">
+        <div class="mx-auto" style="width:50%; padding:10px 0px;">
+        <img src="../Assets/imgdashboard/Logo.png" alt="Logo" srcset="" class="" >
+        </div>
+        <hr class="mx-auto w-75" style="height:2px; background-color: #DEDEDE;">
+        <div class="d-flex flex-column gap-5 justify-content-between ">
+        <div class="d-flex flex-column mx-auto w-75 gap-4">
+            <a href="~/Dashboard/" class="d-flex flex-column flex-md-row align-items-center  gap-2">
+                <img src="../Assets/imgdashboard/icondashboard.png" alt="icon dashboard" srcset="">
+                <div >Dashboard</div>
+            </a>
+            <a href="~/Dashboard/package" class="d-flex flex-column flex-md-row align-items-center  gap-2">
+                <img src="../Assets/imgdashboard/iconpackage.png" alt="icon package" srcset="">
+                <div >My packages</div>
+            </a>
+            <a href="~/Dashboard/shipment" class="d-flex flex-column flex-md-row align-items-center  gap-2">
+                <img src="../Assets/imgdashboard/iconshipments.png" alt="icon shipments" srcset="">
+                <div >My Shipments</div>
+            </a>
+      
+            <div>
+                Setting
+            </div>
+            <a href="~/Dashboard/address" class="d-flex flex-column flex-md-row align-items-center  gap-2">
+                <img src="../Assets/imgdashboard/iconaddress.png" alt="icon address" srcset="">
+                <div >My Adresses</div>
+            </a>
+            <a href="~/Dashboard/membership" class="d-flex flex-column flex-md-row align-items-center  gap-2">
+                <img src="../Assets/imgdashboard/iconmembership.png" alt="icon membership" srcset="">
+                <div >My Membership</div>
+            </a>
+            <a href="~/Dashboard/shipping" class="d-flex flex-column flex-md-row align-items-center  gap-2">
+                <img src="../Assets/imgdashboard/iconshipping.png" alt="icon shipping" srcset="">
+                <div >Shipping Calculator</div>
+            </a>
+            <a href="~/Dashboard/secured" class="d-flex flex-column flex-md-row align-items-center  gap-2">
+                <img src="../Assets/imgdashboard/iconsecured.png" alt="icon secured" srcset="">
+                <div >Secured Delivery</div>
+            </a>
+            <a href="~/Dashboard/referfriends"  class="d-flex flex-column flex-md-row align-items-center  gap-2">
+                <img src="../Assets/imgdashboard/iconfriends.png" alt="icon refer" srcset="">
+                <div >Refer Friends</div>
+            </a>
+    </div>
+        </div>
+        <div class="border d-flex flex-column align-items-center gap-2 rounded my-4 mx-auto" style="width: 80%; padding: 10px;">
+           <div class="p-1 border rounded d-flex align-items-center gap-1 ">
+            <button class="px-2 py-1 rounded bg-red-clr ">USA</button>
+            <button class="px-2 py-1 rounded">Canada</button>
+           </div>
+           <div class="text-start">
+                <div class="fw-semibold ">Ucok Pahlevi</div>
+                <div class="fw-semibold">Nasuha, 473 Amherst St.,Unit 7193828, NH, 03063</div>
+                <div>781-491-0874</div>
+                </div>
+      </div>
+      <div class="w-75 d-flex flex-column gap-3 mx-auto">
+     <button class="w-75 bg-red-clr w-100 p-1 rounded"> My Account</button>
+     <button class="w-75 p-1 mx-auto rounded" style="background-color: #EEF0F3;"><a href="~/Home/login">Log Out</a></button>
+     </div>
+      </div>
+      <main class="content">
+        @RenderBody()
+    </main>
+</div>
+
+    
+     <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

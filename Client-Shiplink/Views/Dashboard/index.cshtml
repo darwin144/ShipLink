@@ -1,0 +1,66 @@
+@{
+    Layout = "~/Views/Shared/_DashboardLayout.cshtml";
+}
+<head>
+     <link href="~/css/dashboardIndex.css" rel="stylesheet" />
+</head>
+<style>
+    .second { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("/Assets/imgdashboard/line-blue.png"); /* Path relatif dari root wwwroot */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px;
+    text-align: center;
+}
+
+.text-red-clr { 
+    color: #CC0019;
+    font-family: 600;
+}
+    .btn-red-clr { 
+        border: none;
+        background-color: #CC0019;
+        color: white;
+    }
+    .img-option {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+</style>
+<div class="">
+    <div class="d-flex gap-2">
+        <div class="d-flex flex-column w-100 p-4 gap-4 border rounded" style="height: 80vh;">
+   <div class=" d-flex justify-content-between ">
+        <div class=" d-flex  text-start " style="gap:20px;">
+            <div>
+            <h1>Income Shipments <span class="px-2 py-1 btn-red-clr rounded h-fit" style="font-size: 16px;">0</span></h1>
+            <div class="w-50 bg-red-clr rounded" style="height: 10px;"></div>
+            </div>
+            <h1>Outging Shipments <span class="px-2 py-1 btn-red-clr rounded h-fit" style="font-size: 16px;">0</span></h1>
+        </div>
+        <div class="w-25">
+            <input type="text" class="form-control" placeholder="Search your package" >
+        </div>
+        </div>
+           <div class="w-100 h-100 d-flex gap-4 flex-column align-items-center justify-content-center ">
+            <h1 class="text-red-clr fw-bold " style="font-size: 60px;">ShipLink</h1>
+            <div class="text-center">
+            <h2 class="fw-semibold">You Dont Have Any Data Display Here</h2>
+            <h2 class="fw-normal ">Start Shipping Today </h2>
+            </div>
+            <button class="btn-red-clr px-2 py-1 rounded">Send Package</button>
+        </div>
+        </div>
+           <div class="w-25 d-flex flex-column second rounded border"  style="height: fit-content;">
+        <h2>More Benefit With Membership</h2>
+        <h1>Premium</h1>
+        <p>Level 2 Discound Bonus</p>
+        <button class="btn-red-clr rounded px-4 py-2">Upgrade</button>
+    </div>
+    </div>
+</div>
