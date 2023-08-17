@@ -36,6 +36,7 @@ namespace Client_Shiplink.Repository.Data
 
         public async Task<ResponseMessageVM> Registers(RegisterVM entity)
         {
+            entity.ConfirmPassword = entity.Password;
             ResponseMessageVM entityVM = null;
             StringContent content = new StringContent(JsonConvert.SerializeObject(entity), Encoding.UTF8, "application/json");
             using (var response = httpClient.PostAsync(request + "Account/Register", content).Result)

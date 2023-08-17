@@ -20,11 +20,11 @@ namespace API_ShipLink.Repository
 
         public async Task<List<string>>? GetRoles(string email)
         {
-
             try
             {
-                var employee = await _context.User.FirstOrDefaultAsync(e => e.Email == email);
-                var roles = await _context.AccountRole.Where(ar => ar.Account_id == employee.Id)
+                var account = GetUserData(email).Result;
+                var User_id = Guid.Parse(account.User_Id);
+                var roles = await _context.AccountRole.Where(ar => ar.Account_id == User_id)
                                 .Join(_context.Role, ar => ar.Role_id, r => r.Id, (ar, r) => r.Name)
                                 .ToListAsync();
                 return roles;
@@ -43,7 +43,7 @@ namespace API_ShipLink.Repository
                 {
                     User_Id = e.Id.ToString(),
                     Email = e.Email,
-                    FullName = String.Concat(e.Firstname, " ", e.Lastname),
+                    FullName = e.Name,
                 }).FirstOrDefaultAsync(e => e.Email == email);
                 return account;
             }
@@ -81,12 +81,12 @@ namespace API_ShipLink.Repository
                 {
                     var user = new User
                     {
-                        Firstname = register.Firstname,
-                        Lastname = register.Lastname,
+                        Name = register.Name,
                         Email = register.Email,
-                        Phone = register.Phone,
-                        Address = register.Address,
                         Password = register.Password,
+                        Country = register.Country,
+                        User_Type = register.User_Type
+
                     };
                     var result = _userRepository.CreateWithValidate(user);
                     if (result != 3) return result;

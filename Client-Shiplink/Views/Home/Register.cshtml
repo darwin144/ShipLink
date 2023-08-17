@@ -1,5 +1,6 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+﻿@model Client_Shiplink.ViewModel.RegisterVM
+
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,28 +18,28 @@
         <div class="form">
             <h3 class="text-center" style="color: rgba(0, 80, 157, 1); font-size:20px; ">Save money, save time, take control of your deliveries.</h3>
             <h1 class="text-center" style="margin-bottom: 40px; font-size: 32px;">Sign up to send and save instantly.</h1>
-           <form class="form-register shadow text-left" id="registration-form">
+        <form asp-action="Register" class="form-register shadow text-left" id="registration-form">
         <div class="form-group">
             <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" required class="form-control" placeholder="Enter name" />
+            <input asp-for="Name" type="text" id="name"  required class="form-control" placeholder="Enter name" />
         </div>
         <div class="form-group">
-            <label for="exampleInputPassword1">I Plan to Use Sendle For</label>
+            <label asp-for="User_type">I Plan to Use Sendle For</label>
             <div class="d-flex justify-content-between gap-4">
                 <div class="w-50 form-plan">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="Business" />
+                    <input asp-for="User_type" class="form-check-input" type="radio" id="flexRadioDefault1" value="Business" />
                     <label class="form-check-label" for="flexRadioDefault1"> Business </label>
                 </div>
                 <div class="form-plan w-50">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="Personal" checked />
+                    <input asp-for="User_type" class="form-check-input" type="radio" id="flexRadioDefault2" value="Personal" checked/>
                     <label class="form-check-label" for="flexRadioDefault2"> Personal </label>
                 </div>
             </div>
         </div>
         <div class="form-group">
             <label for="exampleFormControlSelect1">Country</label>
-            <select class="form-select" id="country" aria-label="Default select example">
-                <option selected>Australia</option>
+                <select asp-for="Country" class="form-select" id="country" aria-label="Default select example">
+                <option value="australia">Australia</option>
                 <option value="1">One</option>
                 <option value="2">Two</option>
                 <option value="3">Three</option>
@@ -46,18 +47,18 @@
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Email</label>
-            <input type="email" class="form-control" id="email" placeholder="Enter email" />
+            <input asp-for="Email" type="email" class="form-control" id="email" placeholder="Enter email" />
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="password" placeholder="Enter password" />
+            <input asp-for="Password" type="password" class="form-control" id="password" placeholder="Enter password" />
             <label for="exampleInputPassword1">Must be at least 8 characters</label>
         </div>
         <div class="form-group form-check">
             <input type="checkbox" class="form-check-input" id="agreedToTerms" />
             <label class="form-check-label" for="agreedToTerms">By signing up you agree to our <span class="text-red-clr">terms and conditions.</span></label>
         </div>
-        <button type="submit" class="btn bg-red-clr"><a href="~/Home/Dashboard"></a>Get My Free Account</button>
+        <button type="submit" class="btn bg-red-clr">Get My Free Account</button>
         <div>Already have an account? <a class="text-red-clr" href="~/Home/Login" style="cursor: pointer">Login up now</a></div>
     </form>
         </div>
@@ -66,4 +67,4 @@
       
     <script src="~/lib/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-</html>
+
