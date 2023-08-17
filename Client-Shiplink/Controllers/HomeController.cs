@@ -77,10 +77,6 @@ namespace Client_Shiplink.Controllers
         {
             return View();
         }
-        public IActionResult Dashboard()
-        {
-            return View();
-        }
 
         public IEnumerable<Claim> ExtractClaims(string jwtToken)
         {

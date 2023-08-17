@@ -1,0 +1,36 @@
+h1 {
+  font-size: 28px;
+}
+.content {
+  background-color: #ffffff;
+}
+
+.text-red-clr {
+  color: #d90429;
+}
+.bg-red-clr {
+  background: #d90429;
+  color: white;
+}
+.bg-green-clr {
+  background-color: #50cd8d;
+}
+
+.bg-grey-clr {
+  background-color: #dedede;
+}
+.btn-green-clr {
+  background-color: #8ddeb5;
+  color: #50cd8d;
+  border: 1px solid #50cd8d;
+}
+.btn-blue-clr {
+  background-color: #c5e2ff;
+  color: #3e9eff;
+  border: 1px solid #3e9eff;
+}
+.btn-orange-clr {
+  background-color: #ffecc8;
+  color: #ffc149;
+  border: 1px solid #ffc149;
+}

@@ -1,0 +1,100 @@
+@{
+    Layout = "~/Views/Shared/_DashboardLayout.cshtml";
+}
+<head>
+     <link href="~/css/dashboardShipping.css" rel="stylesheet" />
+</head>
+
+<style>
+.second { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("/Assets/imgdashboard/line-blue.png"); /* Path relatif dari root wwwroot */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px;
+    text-align: center;
+}
+
+.text-red-clr { 
+    color: #CC0019;
+    font-family: 600;
+}
+    .btn-red-clr { 
+        border: none;
+        background-color: #CC0019;
+        color: white;
+    }
+    .img-option {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+</style>
+<body>
+    <div class="d-flex gap-3 ">
+    <div class="w-75 first rounded border p-4 ">
+    <h1>Shipping Calculator</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non fermentum enim, nec finibus tellus.</p>
+    <div class="d-flex flex-column gap-4">
+    <div class="w-50">
+        <div class="form-group">
+        <label for="customSelect">Select Your MailBox <span class="text-red-clr">*</span></label>
+     <select class="form-select" id="customSelect" style="width: 400px;">
+        <optgroup label="Option 1">
+            <option data-content="<img src='../Assets/imgdashboard/flag-uk.png' class='img-option'> Option 1B">Option 1B</option>
+        </optgroup>
+       </select>
+        </div>
+    </div>
+    <div class="w-50">
+         <label for="customSelect">Package Weight <span class="text-red-clr">*</span></label>
+         <div class="d-flex gap-2 align-items-center w-25">
+            <input type="text" class="form-control" style="width: 180px;">
+            <select class="form-select" style="width: 80px;" aria-label="Default select example">
+        <option selected>lbs</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+        </select>
+         </div>
+    </div>
+    <div class="">
+         <label for="customSelect">Package dimension<span class="text-red-clr">*</span></label>
+         <div class="d-flex gap-2 align-items-center">
+            <div>
+                <label for="">Length</label>
+                <input type="text" class="form-control" style="width: 180px;">
+            </div>
+            <div>
+                <label for="">Width</label>
+                <input type="text" class="form-control" style="width: 180px;">
+            </div>
+            <div>
+                <label for="">Height</label>
+                <input type="text" class="form-control" style="width: 180px;">
+            </div>
+<div class="d-flex flex-column align-items-end ">
+              <select class="form-select" style="width: 80px;" aria-label="Default select example">
+        <option selected>lbs</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+        </select>
+        </div>
+        </div>
+    </div>
+    </div>
+    </div >
+    <div class="w-25 d-flex flex-column second rounded border">
+        <h2>More Benefit With Membership</h2>
+        <h1>Premium</h1>
+        <p>Save Up 20% Shipping Cost With Gold or Premium Account</p>
+        <button class="btn-red-clr rounded px-4 py-2">Upgrade</button>
+    </div>
+</div>      
+
+</body>
