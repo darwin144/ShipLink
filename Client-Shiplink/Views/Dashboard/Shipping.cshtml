@@ -2,9 +2,16 @@
     Layout = "~/Views/Shared/_DashboardLayout.cshtml";
 }
 <head>
-     <link href="~/css/dashboardShipping.css" rel="stylesheet" />
-</head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shipping</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
+    <link href="~/lib/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/dashboardIndex.css" rel="stylesheet" />
+</head>
 <style>
 .second { 
     display: flex;
@@ -39,19 +46,20 @@
     <div class="w-75 first rounded border p-4 ">
     <h1>Shipping Calculator</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non fermentum enim, nec finibus tellus.</p>
-    <div class="d-flex flex-column gap-4">
+    <div class="d-flex flex-column gap-4 p-4">
     <div class="w-50">
         <div class="form-group">
-        <label for="customSelect">Select Your MailBox <span class="text-red-clr">*</span></label>
-     <select class="form-select" id="customSelect" style="width: 400px;">
-        <optgroup label="Option 1">
-            <option data-content="<img src='../Assets/imgdashboard/flag-uk.png' class='img-option'> Option 1B">Option 1B</option>
-        </optgroup>
-       </select>
+        <label for="customSelect" class="fw-bold my-2">Select Your MailBox <span class="text-red-clr">*</span></label>
+         <select id="customSelect" class="form-select" style="width: 400px;">
+            <option value="uk" data-thumbnail="/Assets/imgdashboard/usa-flag.png">Canada, Nusuha, NH, 03063</option>
+            <option value="uk" data-thumbnail="/Assets/imgdashboard/flag-uk.png">uk, Nusuha, NH, 03063</option>
+                 <option value="uk" data-thumbnail="/Assets/imgdashboard/canada-flag.png">Testing, Nusuha, NH, 03063</option>
+                </select>
+
         </div>
     </div>
     <div class="w-50">
-         <label for="customSelect">Package Weight <span class="text-red-clr">*</span></label>
+         <label for="customSelect"  class="fw-bold my-2">Package Weight <span class="text-red-clr">*</span></label>
          <div class="d-flex gap-2 align-items-center w-25">
             <input type="text" class="form-control" style="width: 180px;">
             <select class="form-select" style="width: 80px;" aria-label="Default select example">
@@ -63,8 +71,8 @@
          </div>
     </div>
     <div class="">
-         <label for="customSelect">Package dimension<span class="text-red-clr">*</span></label>
-         <div class="d-flex gap-2 align-items-center">
+         <label for="customSelect"  class="fw-bold my-2">Package dimension<span class="text-red-clr">*</span></label>
+         <div class="d-flex gap-2 align-items-center ">
             <div>
                 <label for="">Length</label>
                 <input type="text" class="form-control" style="width: 180px;">
@@ -77,24 +85,55 @@
                 <label for="">Height</label>
                 <input type="text" class="form-control" style="width: 180px;">
             </div>
-<div class="d-flex flex-column align-items-end ">
-              <select class="form-select" style="width: 80px;" aria-label="Default select example">
+     <select class="form-select mt-4" style="width: 80px;" aria-label="Default select example">
         <option selected>lbs</option>
         <option value="1">One</option>
         <option value="2">Two</option>
         <option value="3">Three</option>
-        </select>
+     </select>
         </div>
+    </div>
+    <div class="" style="width: 60%;">
+         <label for="customSelect"  class="fw-bold my-2">Reshipped to ...</label>
+        <div class="d-flex gap-5  align-items-center ">
+            <div class="w-100 d-flex flex-column gap-2">
+                <div>
+                   <label for="customSelect"  class="py-1">Country <span class="text-red-clr">*</span></label>
+                   <select class="form-select" aria-label="Default select example">
+                        <option selected>Australia</option>
+                         <option value="1">USA</option>
+                         <option value="2">Canada</option>
+                    </select>
+                    </div>
+                     <div>
+                   <label for="customSelect"  class="py-1">City<span class="text-red-clr">*</span></label>
+                    <input type="text" class="form-control"></div>
+            </div>
+      <div class="w-100 d-flex flex-column gap-2">
+  <div>
+                <div>
+                   <label for="customSelect"  class="py-1">State / Province<span class="text-red-clr">*</span></label>
+                    <input type="text" class="form-control"></div>
+                    </div>
+                     <div>
+                   <label for="customSelect"  class="py-1">Zip/Postal Code<span class="text-red-clr">*</span></label>
+                    <input type="text" class="form-control"></div>
+            </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-end ">
+            <button class="btn-red-clr px-4 py-2 rounded">Show Rates</button>
         </div>
     </div>
     </div>
-    </div >
-    <div class="w-25 d-flex flex-column second rounded border">
+
+    <div class="w-25 d-flex flex-column second rounded border h-100">
         <h2>More Benefit With Membership</h2>
         <h1>Premium</h1>
         <p>Save Up 20% Shipping Cost With Gold or Premium Account</p>
         <button class="btn-red-clr rounded px-4 py-2">Upgrade</button>
     </div>
-</div>      
+
+
 
 </body>
