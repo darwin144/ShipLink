@@ -9,39 +9,39 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/dashboardLayout.css">
-    <link rel="stylesheet" href="~/Client_Shiplink.styles.css" asp-append-version="true" />
+    @* <link rel="stylesheet" href="~/Client_Shiplink.styles.css" asp-append-version="true" /> *@
 </head>
 <body>
     <div class="header">
            <div class="d-flex gap-2 align-items-center justify-content-center  ">
-            <h2>Ship</h2>
+            <a>Ship</a>
             <img src="../Assets/imgdashboard/arrow-down.png" alt="Arrow Down" class="arrow-down" srcset="">
            </div>
            <div class="d-flex gap-2 align-items-center justify-content-center  ">
-            <h2>Track</h2>
+            <a>Track</a>
             <img src="../Assets/imgdashboard/arrow-down.png" alt="Arrow Down" class="arrow-down" srcset="">
            </div>
            <div class="d-flex gap-2 align-items-center justify-content-center  ">
-            <h2>Support</h2>
+            <a>Support</a>
             <img src="../Assets/imgdashboard/arrow-down.png" alt="Arrow Down" class="arrow-down" srcset="">
            </div>
            <div class="d-flex gap-2 align-items-center justify-content-center  ">
-            <h2>Support</h2>
+            <a>Support</a>
             <img src="../Assets/imgdashboard/arrow-down.png" alt="Arrow Down" class="arrow-down" srcset="">
            </div>
-           <div class="d-flex gap-2 align-items-center justify-content-center  ">
+           <a class="d-flex gap-2 align-items-center justify-content-center  ">
             <img src="../Assets/imgdashboard/user.png" alt="user" style="width: 30px; height: 30px;">
             <div>
-            <div class="fw-bold">User</div>
-            <div>Premium</div>
+            <div class="">User</div>
+            <div class="fw-light ">Premium</div>
             </div>
             <img src="../Assets/imgdashboard/arrow-down.png" alt="Arrow Down" class="arrow-down" srcset="">
-           </div>
-           <div class="d-flex gap-2 align-items-center justify-content-center  ">
+           </a>
+           <a class="d-flex gap-2 align-items-center justify-content-center  ">
             <img src="../Assets/imgdashboard/flag-uk.png" alt="user" style="width: 24px; height: 24px;">
-            <h2>ENG</h2>
+            <div>ENG</div>
             <img src="../Assets/imgdashboard/arrow-down.png" alt="Arrow Down" class="arrow-down" srcset="">
-           </div>
+           </a>
     </div>
     <div class="wrapper">
     <div class="sidebar">
@@ -82,6 +82,10 @@
             <a href="~/Dashboard/secured" class="d-flex flex-column flex-md-row align-items-center  gap-2">
                 <img src="../Assets/imgdashboard/iconsecured.png" alt="icon secured" srcset="">
                 <div >Secured Delivery</div>
+            </a>
+            <a href="~/Dashboard/billinghistory"  class="d-flex flex-column flex-md-row align-items-center  gap-2">
+                <img src="../Assets/imgdashboard/iconsbillings.png" alt="icon refer" srcset="">
+                <div>Billing History</div>
             </a>
             <a href="~/Dashboard/referfriends"  class="d-flex flex-column flex-md-row align-items-center  gap-2">
                 <img src="../Assets/imgdashboard/iconfriends.png" alt="icon refer" srcset="">

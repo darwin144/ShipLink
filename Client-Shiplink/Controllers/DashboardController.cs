@@ -36,7 +36,7 @@ namespace Client_Shiplink.Controllers
         {
             return View();
         }
-        public IActionResult Testing()
+        public IActionResult Billinghistory()
         {
             return View();
         }
