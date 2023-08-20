@@ -7,7 +7,6 @@ body {
   font-family: 'Poppins', sans-serif;
   width: 100vw;
   position: relative;
-  overflow-x: hidden;
 }
 
 .bg-red-clr {
@@ -15,17 +14,25 @@ body {
   color: white;
 }
 
-h2 {
-  font-size: 12px;
+h1 {
+  font-size: 45px;
   font-weight: 600;
 }
+h2 {
+  font-size: 26px;
+  font-weight: 600;
+}
+
 h3 {
+  font-size: 20px;
+}
+h4 {
   font-size: 16px;
 }
 .header a {
   cursor: pointer;
   text-decoration: none;
-  font-weight: 600;
+  font-size: 20px;
   color: black;
 }
 .header {
@@ -54,16 +61,23 @@ button {
   width: 20%;
   min-height: 100vh;
   background-color: #ffffff;
-  padding: 30px;
+  padding: 20px;
   z-index: 30;
 }
 .wrapper .sidebar a {
   text-decoration: none;
   font-size: 16px;
+  padding: 4px 10px;
   color: #000;
 }
 .wrapper .content {
   position: relative;
   width: 78%;
-  padding: 94px 5px 5px 5px;
+  padding: 100px 5px 5px 5px;
+}
+
+.active-link {
+  background-color: #d90429;
+  color: white;
+  border-radius: 4px;
 }
