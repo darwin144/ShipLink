@@ -12,7 +12,15 @@ namespace Client_Shiplink.Controllers
         {
             return View();
         }
+        public IActionResult Shipment()
+        {
+            return View();
+        }
         public IActionResult Address()
+        {
+            return View();
+        }
+        public IActionResult Savedboxsize()
         {
             return View();
         }
@@ -20,7 +28,12 @@ namespace Client_Shiplink.Controllers
         {
             return View();
         }
-        public IActionResult Shipment()
+        public IActionResult AcountDetails()
+        {
+            return View();
+        }
+        
+        public IActionResult Billinghistory()
         {
             return View();
         }
@@ -32,11 +45,7 @@ namespace Client_Shiplink.Controllers
         {
             return View();
         }
-        public IActionResult Shipping()
-        {
-            return View();
-        }
-        public IActionResult Billinghistory()
+        public IActionResult Support()
         {
             return View();
         }
