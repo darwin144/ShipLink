@@ -1,6 +1,3 @@
-h1 {
-  font-size: 28px;
-}
 .content {
   background-color: #ffffff;
 }
@@ -33,4 +30,34 @@ h1 {
   background-color: #ffecc8;
   color: #ffc149;
   border: 1px solid #ffc149;
+}
+
+h1 {
+  font-size: 30px;
+}
+h2 {
+  font-size: 20px;
+}
+.second {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 40px 20px;
+}
+
+.text-red-clr {
+  color: #cc0019;
+  font-family: 600;
+}
+.btn-red-clr {
+  border: none;
+  background-color: #cc0019;
+  color: white;
+}
+.img-option {
+  width: 30px;
+  height: 30px;
+}
+.text-blue-clr {
+  color: #0d509a;
 }

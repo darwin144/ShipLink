@@ -8,7 +8,7 @@ namespace Client_Shiplink.Controllers
         {
             return View();
         }
-        public IActionResult Package()
+        public IActionResult MyMailBox()
         {
             return View();
         }
