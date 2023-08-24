@@ -1,15 +1,39 @@
 @{
-    Layout = "~/Views/Shared/_DashboardLayout.cshtml";
+  Layout = "~/Views/Shared/_DashboardLayout.cshtml";
 }
 <head>
   <link href="~/css/dashboardIndex.css" rel="stylesheet" />
 </head>
 
-<div class="d-flex gap-2 h-100">
-  <div class="w-100">
+<div class="d-flex gap-2 w-100 h-100">
+  <div class="d-flex flex-column gap-3 w-100 border rounded p-4">
     <h1>My Address</h1>
-  </div>
-    @Html.Partial("Components/DashboardStatus")
-</div>
+    @Html.Partial("../Components/DashboardSearchButton")
+    <div>
+      <div class="row gap-2 p-2">@Html.Partial("../Components/CardMyAddress") @Html.Partial("../Components/CardMyAddress.cshtml") @Html.Partial("../Components/CardMyAddress")</div>
+      <div class="row gap-2 p-2">@Html.Partial("../Components/CardMyAddress") @Html.Partial("../Components/CardMyAddress") @Html.Partial("../Components/CardMyAddress")</div>
+      <div class="row gap-2 p-2">@Html.Partial("../Components/CardMyAddress") @Html.Partial("../Components/CardMyAddress") @Html.Partial("../Components/CardMyAddress")</div>
 
+      <nav class="mt-3 d-flex justify-content-end" aria-label="Page navigation example">
+        <ul class="pagination">
+          <li class="page-item">
+            <a class="page-link text-red-clr" href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li class="page-item"><a class="page-link text-red-clr" href="#">1</a></li>
+          <li class="page-item"><a class="page-link text-red-clr" href="#">2</a></li>
+          <li class="page-item"><a class="page-link text-red-clr" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link text-red-clr" href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  @Html.Partial("../Components/DashboardStatus")
+</div>
 
