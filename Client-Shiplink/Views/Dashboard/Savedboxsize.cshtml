@@ -1,5 +1,5 @@
 @{
-    Layout = "~/Views/Shared/_DashboardLayout.cshtml";
+  Layout = "~/Views/Shared/_DashboardLayout.cshtml";
 }
 <head>
   <link href="~/css/dashboardIndex.css" rel="stylesheet" />
@@ -8,20 +8,40 @@
 <div class="d-flex gap-2 w-100 h-100">
   <div class="d-flex flex-column gap-3 w-100 border rounded p-4">
     <h1>Saved Box Sizes</h1>
-        @Html.Partial("../Components/DashboardSearchButton.cshtml")
+    <div class="d-flex align-items-center justify-content-between">
+      <partial name="../Components/SwitchComponents.cshtml" />
+      <div class="d-flex gap-2">
+        <partial name="../Components/SearchIconComponents.cshtml" />
+        <partial name="../Components/SortComponents.cshtml" />
+      </div>
+      <partial name="../Components/ButtonAddNew.cshtml" />
+    </div>
     <div>
       <div class="row gap-2 p-2">
-                @Html.Partial("../Components/CardSavedBoxSize.cshtml") @Html.Partial("../Components/CardSavedBoxSize.cshtml") @Html.Partial("../Components/CardSavedBoxSize.cshtml") @Html.Partial("../Components/CardSavedBoxSize.cshtml")
+        <partial name="../Components/CardSavedBoxSize.cshtml" />
+        <partial name="../Components/CardSavedBoxSize.cshtml" />
+        <partial name="../Components/CardSavedBoxSize.cshtml" />
+        <partial name="../Components/CardSavedBoxSize.cshtml" />
       </div>
       <div class="row gap-2 p-2">
-                @Html.Partial("../Components/CardSavedBoxSize.cshtml") @Html.Partial("../Components/CardSavedBoxSize.cshtml") @Html.Partial("../Components/CardSavedBoxSize.cshtml") @Html.Partial("../Components/CardSavedBoxSize.cshtml")
+        <partial name="../Components/CardSavedBoxSize.cshtml" />
+        <partial name="../Components/CardSavedBoxSize.cshtml" />
+        <partial name="../Components/CardSavedBoxSize.cshtml" />
+        <partial name="../Components/CardSavedBoxSize.cshtml" />
       </div>
       <div class="row gap-2 p-2">
-                @Html.Partial("../Components/CardSavedBoxSize.cshtml") @Html.Partial("../Components/CardSavedBoxSize.cshtml") @Html.Partial("../Components/CardSavedBoxSize.cshtml") @Html.Partial("../Components/CardSavedBoxSize.cshtml")
+        <partial name="../Components/CardSavedBoxSize.cshtml" />
+        <partial name="../Components/CardSavedBoxSize.cshtml" />
+        <partial name="../Components/CardSavedBoxSize.cshtml" />
+        <partial name="../Components/CardSavedBoxSize.cshtml" />
       </div>
       <div class="row gap-2 p-2">
-                @Html.Partial("../Components/CardSavedBoxSize.cshtml") @Html.Partial("../Components/CardSavedBoxSize.cshtml") @Html.Partial("../Components/CardSavedBoxSize.cshtml") @Html.Partial("../Components/CardSavedBoxSize.cshtml")
+        <partial name="../Components/CardSavedBoxSize.cshtml" />
+        <partial name="../Components/CardSavedBoxSize.cshtml" />
+        <partial name="../Components/CardSavedBoxSize.cshtml" />
+        <partial name="../Components/CardSavedBoxSize.cshtml" />
       </div>
+
       <nav class="mt-3 d-flex justify-content-end" aria-label="Page navigation example">
         <ul class="pagination">
           <li class="page-item">
@@ -42,6 +62,6 @@
     </div>
   </div>
 
-    @Html.Partial("../Components/DashboardStatus")
+  @Html.Partial("../Components/DashboardStatus")
 </div>
 

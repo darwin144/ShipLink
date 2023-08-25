@@ -16,6 +16,14 @@ namespace Client_Shiplink.Controllers
         {
             return View();
         }
+        public IActionResult SavedQuotes()
+        {
+            return View();
+        }
+        public IActionResult AssistedPurchase()
+        {
+            return View();
+        }
         public IActionResult Address()
         {
             return View();
