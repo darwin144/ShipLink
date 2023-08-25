@@ -22,6 +22,10 @@ namespace Client_Shiplink.Controllers
         {
             return View();
         }
+        public IActionResult Crossbordermailbox()
+        {
+            return View();
+        }
         public IActionResult Shippinglabels()
         {
             return View();
