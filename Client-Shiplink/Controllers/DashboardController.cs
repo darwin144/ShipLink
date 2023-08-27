@@ -1,4 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
+using Client_Shiplink.Models;
+
 
 namespace Client_Shiplink.Controllers
 {
@@ -12,10 +14,11 @@ namespace Client_Shiplink.Controllers
         {
             return View();
         }
-        public IActionResult Shipment()
-        {
-            return View();
-        }
+public IActionResult Shipment()
+{
+    return View();
+}
+
         public IActionResult SavedQuotes()
         {
             return View();

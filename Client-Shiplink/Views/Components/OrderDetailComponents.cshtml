@@ -1,0 +1,151 @@
+@model Client_Shiplink.Models.OrderDetails.OrderDetail
+
+@{
+    string backgroundColor;
+    string textColor;
+    string borderColor;
+    string display;
+    string backgroundStatusOne;    
+    string backgroundStatusTwo;    
+    string backgroundStatusThree;    
+
+    if (@Model.StatusDelivery == "Ready To Pickup")
+    {
+        backgroundColor = "#D3F2E3";
+        textColor = "#50CD8D";
+        borderColor = "#50CD8D";
+        display = "flex";
+        backgroundStatusOne = "#50CD8D";
+        backgroundStatusTwo = "#50CD8D";
+        backgroundStatusThree = "#50CD8D";
+    }
+    else if (@Model.StatusDelivery == "Recieved")
+    {
+        backgroundColor = "#B1D8FF";
+        textColor = "#3E9EFF";
+        borderColor = "#3E9EFF";
+        display = "none";
+        backgroundStatusOne = "#50CD8D";
+         backgroundStatusTwo = "#DEDEDE";
+         backgroundStatusThree = "#DEDEDE";
+    }
+    else if (@Model.StatusDelivery == "Transit")
+    {
+        backgroundColor = "#FFECC8";
+        textColor = "#FFC149";
+        borderColor = "#FFC149";
+         display = "none";
+         backgroundStatusOne = "#50CD8D";
+        backgroundStatusTwo = "#50CD8D";
+        backgroundStatusThree = "#DEDEDE";
+    }
+    else
+    {
+        //Default
+        backgroundColor = "#FFFFFF";
+        textColor = "#000";
+        borderColor = "#000"; 
+         display = "none";
+            backgroundStatusOne = "#DEDEDE";
+         backgroundStatusTwo = "#DEDEDE";
+         backgroundStatusThree = "#DEDEDE";
+    }
+}
+
+@{
+    string textInformation;
+    if(@Model.Information == "My Shipment" || @Model.Information == "My Mailbox" ) { 
+        textInformation="#d90429";
+    } else { 
+        textInformation="#05539F";
+    }
+}
+
+    <div class="border rounded d-flex flex-column gap-3 p-2">
+        <div class="d-flex align-items-center justify-content-between gap-4">
+            <div class="d-flex gap-5">
+                <div class="d-flex gap-2">
+                    <div class="d-flex align-items-center justify-content-center rounded position-relative " style="background:#05539F; width:50px; height:50px;">
+                    <img src="../Assets/imgdashboard/Truck-icons.png" alt="" srcset="">
+                    <div class="position-absolute" style="width: 26px; height: 26px; position:absolute; top:-10px; left:-10px; display: @display;">
+                            <img src="../Assets/imgdashboard/rounded-img.png" alt="" srcset="">
+                    </div>
+                    </div>
+                    <div>
+                        <div class="" style="font-size: 20px; font-weight: 600;">@Model.Package</div>
+                        <div style="color: @textInformation;">@Model.Information</div>
+                        <div class="d-flex gap-2 align-items-center justify-content-center">
+                            <div>@Model.Delivery</div>
+                            <div class="text-red-clr">@Model.Number</div>
+                            <img src="../Assets/imgdashboard/iconsave.png" alt="" srcset="">
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex gap-2 align-items-center">
+                    <div class="h-100 rounded" style="width: 4px; background-color: #DEDEDE;"></div>
+                    <img src="@Model.Image" alt="" srcset="" style="width: 44px; height: 27px;">
+                </div>
+            </div>
+            <div class="d-flex justify-content-between align-items-center w-50">
+                <div class="d-flex flex-column gap-2">
+                    <div class="d-flex gap-1">
+                        <div class="rounded" style="width: 40px; height: 8px; background-color: @backgroundStatusOne;"></div>
+                        <div class="rounded" style="width: 40px; height: 8px; background-color: @backgroundStatusTwo;"></div>
+                        <div class="rounded" style="width: 40px; height: 8px; background-color: @backgroundStatusThree;"></div>
+                    </div>
+                    <div>
+                        Shipped, @Model.ShippedDate?.ToString("dd MMM, yyyy")
+                    </div>
+                </div>
+                <div class="d-flex align-items-center gap-4">
+                    <div class="d-flex flex-column gap-2">
+<button class="p-1 rounded" style="background-color: @backgroundColor; border: 1px solid @borderColor; color: @textColor;">
+    @Model.StatusDelivery
+</button>
+
+                        <div>@Model.Location</div>
+                    </div>
+                    <div style="cursor:pointer">
+                        <img src="../Assets/imgdashboard/arrow-down-gray.png" alt="" srcset="" id="arrow-down-@Model.Number" onclick="toggleOrderDetails('@Model.Number')">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="align-items-center justify-content-between" style="display: none;" id="order-@Model.Number">
+            <div class="d-flex gap-2">
+                <img src="../Assets/imgdashboard/iconphone.png" alt="" srcset="">
+                <div>
+                    <div class="fw-semibold">
+                    @Model.Name
+                    </div>
+                    <div>@Model.Size</div>
+                    <div>@Model.Weight</div>
+                </div>
+            </div>
+            <div class="gap-1" style="display: @display; flex-direction:column">
+                <div>
+                    Confirm Your Order
+                </div>
+                <div class="d-flex gap-3">
+                    <button class="bg-red-clr px-4 py-1 rounded">Hold - Pickup</button>
+                    <button class="bg-red-clr px-4 py-1 rounded">Border Pickup</button>
+                    <button class="bg-red-clr px-4 py-1 rounded">Forward Package</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        function toggleOrderDetails(Number) {
+            var orderDetails = document.getElementById("order-" + Number);
+            var arrow = document.getElementById("arrow-down-" + Number);
+            if (orderDetails.style.display === "none") {
+                orderDetails.style.display = "flex";
+                arrow.style.transform = "rotate(180deg)";
+            } else {
+                orderDetails.style.display = "none";
+                arrow.style.transform = "rotate(0deg)";
+            }
+        }
+    </script>
