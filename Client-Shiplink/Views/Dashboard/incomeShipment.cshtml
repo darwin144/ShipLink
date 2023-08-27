@@ -1,0 +1,16 @@
+@using Client_Shiplink.DummyData
+@using Client_Shiplink.Models.OrderDetails
+
+@{
+    Layout = "~/Views/Shared/_indexDashboardLayout.cshtml";
+    var dummyData = DummyDataOrder.GetDummyData();
+}
+
+@section Content {
+                        <div class="d-flex flex-column  gap-2 h-100">
+        @foreach (var orderDetail in dummyData.Where(od => od.Information == "My Mailbox" || od.Information == "Shipping Mailbox"))
+        {
+                                    <partial name="../Components/OrderDetailComponents" model="orderDetail" />
+        }
+                        </div>
+}
