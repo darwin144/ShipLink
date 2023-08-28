@@ -60,5 +60,13 @@ public IActionResult Shipment()
         {
             return View();
         }
+        public IActionResult IncomeShipment()
+        {
+            return View();
+        }
+        public IActionResult OutgoingShipment()
+        {
+            return View();
+        }
     }
 }

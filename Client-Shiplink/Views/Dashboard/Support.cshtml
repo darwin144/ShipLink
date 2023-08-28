@@ -1,10 +1,167 @@
 @{
-    Layout = "~/Views/Shared/_DashboardLayout.cshtml";
+  Layout = "~/Views/Shared/_DashboardLayout.cshtml";
 }
 <head>
   <link href="~/css/dashboardIndex.css" rel="stylesheet" />
 </head>
+<style>
+  .styled-table {
+    border-collapse: collapse;
+    border-radius:6px;
+    overflow:hidden;
+}
 
-<div>
-  <h1>Support</h1>
+.table-head{
+  border-radius:20px;
+  overflow:hidden;
+    background-color: #05539F;  
+    color: white;
+}
+  .table-head th { 
+    font-weight:500;
+  }
+  th,td {
+    padding:10px;
+  }
+
+  </style>
+
+<div class="d-flex w-100 h-100 gap-2">
+  <div style="" class=" p-4 border rounded">
+    <h2>Support</h2>
+    <p>Get our support from a dedicated team of experts who are committed to assisting you every step of the way.</p>
+    <div class="fw-bold">Showing List Tickets</div>
+    <div class="d-flex align-items-center justify-content-between ">
+      <div class="d-flex gap-2">
+      <partial name="../Components/SortComponents" />
+      <partial name="../Components/SearchIconComponents" />
 </div>
+  <partial name="../Components/ButtonAddNew" />
+    </div>
+    <div class="w-100 py-4">
+      <table class="w-100 styled-table" style="">
+        <thead class="table-head">
+          <tr>
+          <th>ID</th>
+          <th>Status</th>
+          <th>Name</th>
+          <th>Subject</th>
+          <th>Date</th>
+          <th>Customers</th>
+          </tr>
+        </thead>
+         <tbody class="table-body">
+          <tr>
+          <td>#1231451</td>
+          <td>Active</td>
+          <td>John Doe </td>
+          <td>Membership Premium </td>
+          <td>27/3/2023 22:22:30 PM</td>
+          <td>Sendi Ardiansyah</td>
+          </tr>
+          <tr>
+          <td>#1231451</td>
+          <td>Active</td>
+          <td>John Doe </td>
+          <td>Membership Premium </td>
+          <td>27/3/2023 22:22:30 PM</td>
+          <td>Sendi Ardiansyah</td>
+          </tr>
+          <tr>
+          <td>#1231451</td>
+          <td>Active</td>
+          <td>John Doe </td>
+          <td>Membership Premium </td>
+          <td>27/3/2023 22:22:30 PM</td>
+          <td>Sendi Ardiansyah</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="d-flex align-items-center justify-content-between">
+      <div class="d-flex gap-2">
+        <div>Showing</div>
+        <select class="border rounded" style="width:40px" >
+  <option selected>1</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+</select>
+  <div>entries</div>
+      </div>
+      <div>
+                  <nav class="mt-3" aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item">
+      <a class="page-link text-red-clr" href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li class="page-item"><a class="page-link text-red-clr" href="#">1</a></li>
+    <li class="page-item"><a class="page-link text-red-clr" href="#">2</a></li>
+    <li class="page-item"><a class="page-link text-red-clr" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link text-red-clr" href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+  <div style="width:45%" class="p-4 d-flex flex-column gap-4 border rounded">
+    <h2>New Tickets</h2>
+    <div>
+  <div class="w-75 m-auto d-flex flex-column gap-3">
+    <div>
+    <label class="fw-bold mb-1">Full Name<span class="text-red-clr">*</span></label>
+    <input type="text" class="form-control" placeholder="input Name" />
+  </div>
+    <div>
+    <label class="fw-bold mb-1">Subject<span class="text-red-clr">*</span></label>
+    <input type="text" class="form-control" placeholder="input Subject" />
+  </div>
+    <div>
+    <label class="fw-bold mb-1">Area<span class="text-red-clr">*</span></label>
+    <input type="text" class="form-control" placeholder="input Area" />
+  </div>
+    <div>
+    <label class="fw-bold mb-1">Upload File<span class="text-red-clr">*</span></label>
+    <button class="btn bg-red-clr px-4 py-2 d-flex align-items-center gap-2" id="attachButton"><span><svg width="12" height="23" viewBox="0 0 12 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.3636 4.90906V16.909C10.3636 19.3092 8.40022 21.2726 6 21.2726C3.59983 21.2726 1.63641 19.3092 1.63641 16.909V4.36365C1.63641 2.83647 2.83647 1.63635 4.36365 1.63635C5.89077 1.63635 7.09089 2.83647 7.09089 4.36365V16.909C7.09089 17.5088 6.59972 17.9999 5.99995 17.9999C5.40017 17.9999 4.90906 17.5088 4.90906 16.909V6.54542H3.27271V16.909C3.27276 18.4361 4.47282 19.6362 6 19.6362C7.52718 19.6362 8.72729 18.4361 8.72729 16.909V4.36365C8.72729 1.96368 6.76387 0 4.36365 0C1.96342 0 0 1.96368 0 4.36365V16.909C5.11361e-05 20.236 2.67299 22.909 6 22.909C9.32701 22.909 12 20.236 12 16.909V4.90906H10.3636Z" fill="white"/>
+</svg>
+</span>Attach Files</button>
+  </div>
+    <div>
+    <label class="fw-bold mb-1">Message<span class="text-red-clr">*</span></label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+  <div class="d-flex gap-2 align-items-center justify-content-center">
+    <button class="btn text-red-clr" style="background:transparent; border:1px solid #D90429;">Cancel</button>
+    <button class="btn btn-red-clr">Submit</button>
+  </div>
+  </div>
+  </div>
+</div>
+<script>
+  const attachButton = document.getElementById('attachButton');
+
+  attachButton.addEventListener('click', () => {
+    // Create an invisible input element
+    const input = document.createElement('input');
+    input.type = 'file';
+    input.style.display = 'none';
+
+    // Listen for file selection
+    input.addEventListener('change', () => {
+      // Handle the selected files here
+      console.log(input.files);
+    });
+
+    // Trigger click event on the input element
+    document.body.appendChild(input);
+    input.click();
+    document.body.removeChild(input);
+  });
+</script>
