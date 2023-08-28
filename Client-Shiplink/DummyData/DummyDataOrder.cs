@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using Client_Shiplink.Models.OrderDetails;
 
-namespace Client_Shiplink.DummyData
+namespace Client_Shiplink.DummyDataOrder
 {
     public static class DummyDataOrder
     {

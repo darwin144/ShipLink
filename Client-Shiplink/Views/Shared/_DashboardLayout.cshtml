@@ -51,23 +51,23 @@
         <hr class="mx-auto w-75" style="height:2px; background-color: #DEDEDE;">
         <div class="d-flex flex-column gap-3 justify-content-between ">
         <div class="d-flex flex-column mx-auto w-75 gap-3">
-            <a href="~/Dashboard/" class="d-flex flex-column flex-md-row align-items-center  gap-2">
-                      <img src="../Assets/imgdashboard/dashboard.svg" alt="icon dashboard" srcset="">
-                <div >Dashboard</div>
-            </a>
-            <a href="~/Dashboard/mymailbox" class="d-flex flex-column flex-md-row align-items-center  gap-2">
+<a href="~/Dashboard/" class="Link @(Context.Request.Path.StartsWithSegments("/Dashboard/") || Context.Request.Path.StartsWithSegments("/Dashboard/IncomeShipment") || Context.Request.Path.StartsWithSegments("/Dashboard/OutgoingShipment") ? "active" : "")">
+    <img src="../Assets/imgdashboard/dashboard.svg" alt="icon dashboard" srcset="">
+    <div>Dashboard</div>
+</a>
+            <a href="~/Dashboard/mymailbox" class="Link @(Context.Request.Path.StartsWithSegments("/Dashboard/mymailbox") ? "active" : "")">
                 <img src="../Assets/imgdashboard/mailbox.svg" alt="icon dashboard" srcset="">
                 <div >My MailBox</div>
             </a>
-            <a href="~/Dashboard/shipment" class="d-flex flex-column flex-md-row align-items-center  gap-2">
+            <a href="~/Dashboard/shipment" class="Link @(Context.Request.Path.StartsWithSegments("/Dashboard/shipment") ? "active" : "")">
                 <img src="../Assets/imgdashboard/shipment.svg" alt="icon shipments" srcset="">
                 <div >My Shipments</div>
             </a>
-            <a href="~/Dashboard/SavedQuotes" class="d-flex flex-column flex-md-row align-items-center  gap-2">
+            <a href="~/Dashboard/SavedQuotes" class="Link @(Context.Request.Path.StartsWithSegments("/Dashboard/SavedQuotes") ? "active" : "")">
                 <img src="../Assets/imgdashboard/SavedQuotes.svg" alt="icon Saved" srcset="">
                 <div >My Saved Quotes</div>
             </a>
-            <a href="~/Dashboard/AssistedPurchase" class="d-flex flex-column flex-md-row align-items-center  gap-2">
+            <a href="~/Dashboard/AssistedPurchase" class="Link @(Context.Request.Path.StartsWithSegments("/Dashboard/AssistedPurchase") ? "active" : "")">
                 <img src="../Assets/imgdashboard/Assisted.svg" alt="icon Assisted" srcset="">
                 <div >Assisted Purchases</div>
             </a>
@@ -75,32 +75,32 @@
             <div>
                 Setting
             </div>
-            <a href="~/Dashboard/address" class="d-flex flex-column flex-md-row align-items-center  gap-2">
+            <a href="~/Dashboard/address" class="Link @(Context.Request.Path.StartsWithSegments("/Dashboard/address") ? "active" : "")">
                 <img src="../Assets/imgdashboard/address.svg" alt="icon address" srcset="">
                 <div >My Adresses</div>
             </a>
-            <a href="~/Dashboard/savedboxsize" class="d-flex flex-column flex-md-row align-items-center  gap-2">
+            <a href="~/Dashboard/savedboxsize" class="Link @(Context.Request.Path.StartsWithSegments("/Dashboard/savedboxsize") ? "active" : "")">
                 <img src="../Assets/imgdashboard/boxsize.svg" alt="icon box size" srcset="">
                 <div >Saved Box Sizes</div>
             </a>
            
-            <a href="~/Dashboard/membership" class="d-flex flex-column flex-md-row align-items-center  gap-2">
+            <a href="~/Dashboard/membership" class="Link @(Context.Request.Path.StartsWithSegments("/Dashboard/membership") ? "active" : "")">
                 <img src="../Assets/imgdashboard/membershipplans.svg" alt="icon membership" srcset="">
                 <div >Membership Plan</div>
             </a>
-             <a href="~/Dashboard/acountdetails" class="d-flex flex-column flex-md-row align-items-center  gap-2">
+             <a href="~/Dashboard/acountdetails" class="Link @(Context.Request.Path.StartsWithSegments("/Dashboard/acountdetails") ? "active" : "")">
                 <img src="../Assets/imgdashboard/acount.svg" alt="icon Account" srcset="">
                 <div >Acount Details</div>
             </a>
-                   <a href="~/Dashboard/billinghistory"  class="d-flex flex-column flex-md-row align-items-center  gap-2">
+                   <a href="~/Dashboard/billinghistory"  class="Link @(Context.Request.Path.StartsWithSegments("/Dashboard/billinghistory") ? "active" : "")">
                 <img src="../Assets/imgdashboard/billing.svg" alt="icon billing" srcset="">
                 <div>Billing History</div>
             </a>
-            <a href="~/Dashboard/referfriends"  class="d-flex flex-column flex-md-row align-items-center  gap-2">
+            <a href="~/Dashboard/referfriends"  class="Link @(Context.Request.Path.StartsWithSegments("/Dashboard/referfriends") ? "active" : "")">
                 <img src="../Assets/imgdashboard/referfriend.svg" alt="icon refer" srcset="">
                 <div >Refer Friends</div>
             </a>
-            <a href="~/Dashboard/support"  class="d-flex flex-column flex-md-row align-items-center  gap-2">
+            <a href="~/Dashboard/support"  class="Link @(Context.Request.Path.StartsWithSegments("/Dashboard/support") ? "active" : "")">
                 <img src="../Assets/imgdashboard/support.svg" alt="icon support" srcset="">
                 <div >Support</div>
             </a>
@@ -126,6 +126,26 @@
         @RenderBody()
     </main>
 </div>
+
+<script>
+    // Ambil semua tautan dengan class "Link"
+    var links = document.querySelectorAll('.Link');
+
+    // Loop melalui setiap tautan dan tambahkan event listener
+    links.forEach(function(link) {
+        link.addEventListener('click', function() {
+            // Hapus class "active" dari semua tautan
+            links.forEach(function(innerLink) {
+                innerLink.classList.remove('active');
+            });
+
+            // Tambahkan class "active" pada tautan yang diklik
+            link.classList.add('active');
+        });
+    });
+</script>
+
+
 
      <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

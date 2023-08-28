@@ -2,12 +2,25 @@
   background-color: #ffffff;
 }
 
+label {
+  font-weight: 600;
+}
 .text-red-clr {
   color: #d90429;
 }
 .bg-red-clr {
   background: #d90429;
   color: white;
+}
+.btn-red-clr {
+  background: #d90429;
+  color: white;
+}
+
+.btn-transparent-clr {
+  background-color: transparent;
+  border: 1px solid #d90429;
+  color: #d90429;
 }
 .bg-line-red-clr {
   background: #d90429;

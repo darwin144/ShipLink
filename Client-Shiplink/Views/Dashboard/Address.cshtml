@@ -1,4 +1,3 @@
-
 @{
   Layout = "~/Views/Shared/_DashboardLayout.cshtml";
 }
@@ -15,7 +14,10 @@
         <partial name="../Components/SearchIconComponents" />
         <partial name="../Components/SortComponents" />
       </div>
-      <partial name="../Components/ButtonAddNew" />
+      <div class="d-flex gap-2">
+        <partial name="../Components/TrushComponents" />
+        <partial name="../Components/ButtonAddNew" />
+      </div>
     </div>
     <div>
       <div class="row gap-2 p-2">
@@ -53,7 +55,8 @@
       </nav>
     </div>
   </div>
-  <partial name="../Components/DashboardStatus" />
+  <div class="" style="width: 30%; height: 100%;">
+    <partial name="../Components/DashboardStatus" />
+    </div>
 </div>
-
 

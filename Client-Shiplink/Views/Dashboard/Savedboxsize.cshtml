@@ -1,10 +1,20 @@
-
+@using Client_Shiplink.DummyDataSaveBox
+@using Client_Shiplink.Models.SavedBoxSizes
 @{
   Layout = "~/Views/Shared/_DashboardLayout.cshtml";
+  var dummyDataSaveBox = DummyDataSaveBox.GetDummyData();
 }
 <head>
   <link href="~/css/dashboardIndex.css" rel="stylesheet" />
 </head>
+<style>
+  .grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+</style>
 
 <div class="d-flex gap-2 w-100 h-100">
   <div class="d-flex flex-column gap-3 w-100 border rounded p-4">
@@ -15,32 +25,17 @@
         <partial name="../Components/SearchIconComponents" />
         <partial name="../Components/SortComponents" />
       </div>
-      <partial name="../Components/ButtonAddNew" />
+      <div class="d-flex gap-2">
+        <partial name="../Components/TrushComponents" />
+        <partial name="../Components/ButtonAddNew" />
+      </div>
     </div>
     <div>
-      <div class="row gap-2 p-2">
-        <partial name="../Components/CardSavedBoxSize" />
-        <partial name="../Components/CardSavedBoxSize" />
-        <partial name="../Components/CardSavedBoxSize" />
-        <partial name="../Components/CardSavedBoxSize" />
-      </div>
-      <div class="row gap-2 p-2">
-        <partial name="../Components/CardSavedBoxSize" />
-        <partial name="../Components/CardSavedBoxSize" />
-        <partial name="../Components/CardSavedBoxSize" />
-        <partial name="../Components/CardSavedBoxSize" />
-      </div>
-      <div class="row gap-2 p-2">
-        <partial name="../Components/CardSavedBoxSize" />
-        <partial name="../Components/CardSavedBoxSize" />
-        <partial name="../Components/CardSavedBoxSize" />
-        <partial name="../Components/CardSavedBoxSize" />
-      </div>
-      <div class="row gap-2 p-2">
-        <partial name="../Components/CardSavedBoxSize" />
-        <partial name="../Components/CardSavedBoxSize" />
-        <partial name="../Components/CardSavedBoxSize" />
-        <partial name="../Components/CardSavedBoxSize" />
+      <div class="grid-container">
+        @foreach (var savedBoxSize in dummyDataSaveBox)
+        {
+          <partial name="../Components/SavedBoxSizeComponents" model="savedBoxSize" />
+        }
       </div>
 
       <nav class="mt-3 d-flex justify-content-end" aria-label="Page navigation example">
@@ -62,7 +57,68 @@
       </nav>
     </div>
   </div>
-
-<partial name="../Components/DashboardStatus" />
+  <div class="h-100" style="width: 40%; ">
+    <div class="w-100 h-100" id="dashboardStatus" >
+      <partial name="../Components/DashboardStatus" />
+    </div>
+    <div class="border rounded p-4 flex-column gap-4" style="" id="inputNew">
+      <div>
+        <label for="">Save Box Name <span class="text-red-clr">*</span></label>
+        <input type="text" class="form-control" placeholder="Box Name">
+      </div>
+     <label for="">Package Dimension<span class="text-red-clr">*</span></label>
+      <div>
+        <label for="">Width</label>
+        <input type="text" class="form-control w-50" placeholder="0">
+      </div>
+      <div>
+        <label for="">Length</label>
+        <input type="text" class="form-control w-50" placeholder="0">
+      </div>
+      <div>
+        <label for="">Height</label>
+        <div class="w-100 d-flex gap-2">
+        <input type="text" class="form-control w-50" placeholder="0">
+         <select class="form-select w-auto"  >
+  <option selected>In</option>
+  <option value="1">In</option>
+  <option value="2">In</option>
+  <option value="3">In</option>
+</select>
+        </div>
+      </div>
+      <div>
+        <label for="">Package Weight <span class="text-red-clr">*</span></label>
+        <div class="w-100 d-flex gap-2">
+        <input type="text" class="form-control w-50" placeholder="0">
+         <select class="form-select w-auto"  >
+  <option selected>In</option>
+  <option value="1">In</option>
+  <option value="2">In</option>
+  <option value="3">In</option>
+</select>
+        </div>
+      </div>
+      <div class="d-flex align-items-center justify-content-center gap-4 mt-5">
+        <button class="btn btn-transparent-clr" id="cancelInput">Cancel</button>
+        <button class="btn btn-red-clr">Save</button>
+      </div>
+    </div>
+  </div>
 </div>
 
+<script>
+  const dashboardStatus = document.getElementById("dashboardStatus");
+  const inputNew = document.getElementById("inputNew");
+  const buttonAddNew = document.getElementById("buttonAddNew");
+  const cancelInput = document.getElementById("cancelInput")
+
+  buttonAddNew.addEventListener("click", function() {
+    dashboardStatus.style.display = "none";
+    inputNew.style.display = "flex";
+  });
+  cancelInput.addEventListener("click" , function () {
+    dashboardStatus.style.display = "block";
+    inputNew.style.display = "none";
+  })
+</script>
