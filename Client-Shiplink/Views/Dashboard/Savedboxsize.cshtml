@@ -1,5 +1,7 @@
 @using Client_Shiplink.DummyDataSaveBox
 @using Client_Shiplink.Models.SavedBoxSizes
+@model Client_Shiplink.Models.SavedBoxSizes.SavedBoxSize
+
 @{
   Layout = "~/Views/Shared/_DashboardLayout.cshtml";
   var dummyDataSaveBox = DummyDataSaveBox.GetDummyData();
@@ -8,9 +10,14 @@
   <link href="~/css/dashboardIndex.css" rel="stylesheet" />
 </head>
 <style>
-  .grid-container {
+  .grid-4-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+  .grid-2-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 10px;
 }
 
@@ -31,12 +38,39 @@
       </div>
     </div>
     <div>
-      <div class="grid-container">
+      <div class="grid-4-container" id="ListOne" >
         @foreach (var savedBoxSize in dummyDataSaveBox)
         {
-          <partial name="../Components/SavedBoxSizeComponents" model="savedBoxSize" />
+                                                                    <partial name="../Components/SavedBoxSizeComponents" model="savedBoxSize" />
         }
       </div>
+      <div class="grid-2-container" style="display:none;" id="ListTwo">
+        @foreach (var savedBoxSize in dummyDataSaveBox)
+        {
+                                                          <div class="p-1 border rounded">
+                                                                <div class="d-flex align-items-center justify-content-between">
+                                                                  <div>
+                                                                    <h3>@savedBoxSize.Pict</h3>
+                                                              <div class="d-flex align-items-center">
+                                                                    <div>@savedBoxSize.Size In</div>
+                                                                    <div>@savedBoxSize.Weight Ibs</div>
+                                                                   </div>
+                                                                   </div>
+                                                                    <div>
+                                                                    <div class="d-flex align-items-center gap-3  ">
+                                                                        <div class="text-red-clr">Edit</div>
+                                                                        <img src="../Assets/imgdashboard/edit-icons.png" alt="Edit Icons" />
+                                                        <div class="form-check">
+                                                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                        </div>
+                                                                    </div>
+                                                                        <p>@savedBoxSize.Date</p>
+                                                                    </div>
+                                                                    </div>
+                                                                </div>
+        }
+      </div>
+
 
       <nav class="mt-3 d-flex justify-content-end" aria-label="Page navigation example">
         <ul class="pagination">
@@ -57,11 +91,13 @@
       </nav>
     </div>
   </div>
-  <div class="h-100" style="width: 40%; ">
-    <div class="w-100 h-100" id="dashboardStatus" >
+  <div class="h-100" style="width: 30%;" id="dashboardStatus">
+    <div class="w-100 h-100"  >
       <partial name="../Components/DashboardStatus" />
     </div>
-    <div class="border rounded p-4 flex-column gap-4" style="" id="inputNew">
+</div>
+    <div class="" style="width:40%; display:none;" id="inputNew">
+    <div class="w-100 h-100 border rounded p-4 d-flex flex-column gap-4" >
       <div>
         <label for="">Save Box Name <span class="text-red-clr">*</span></label>
         <input type="text" class="form-control" placeholder="Box Name">
@@ -105,17 +141,30 @@
       </div>
     </div>
   </div>
-</div>
+  </div>
 
 <script>
   const dashboardStatus = document.getElementById("dashboardStatus");
   const inputNew = document.getElementById("inputNew");
   const buttonAddNew = document.getElementById("buttonAddNew");
   const cancelInput = document.getElementById("cancelInput")
+  const ListOne = document.getElementById("ListOne")
+  const ListTwo = document.getElementById("ListTwo")
+  const SwitchOne = document.getElementById("SwitchOne")
+  const SwitcTwo = document.getElementById("SwitchTwo")
 
+  SwitchOne.addEventListener("click", function () { 
+    ListOne.style.display = "grid";
+    ListTwo.style.display = "none";
+  })
+
+  SwitchTwo.addEventListener("click", function () { 
+    ListOne.style.display = "none";
+    ListTwo.style.display = "grid";
+  })
   buttonAddNew.addEventListener("click", function() {
     dashboardStatus.style.display = "none";
-    inputNew.style.display = "flex";
+    inputNew.style.display = "block";
   });
   cancelInput.addEventListener("click" , function () {
     dashboardStatus.style.display = "block";

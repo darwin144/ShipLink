@@ -13,7 +13,6 @@ namespace Client_Shiplink.DummyDataSaveBox
             {
                 new SavedBoxSize
                 {
-                    Name = "Username",
                     Pict = "Photo Frame",
                     Size = "8x9x10",
                     Weight = "0.5",
@@ -21,7 +20,6 @@ namespace Client_Shiplink.DummyDataSaveBox
                 },
                 new SavedBoxSize
                 {
-                    Name = "Username",
                     Pict = "Photo Frame",
                     Size = "8x9x10",
                     Weight = "0.5",
@@ -29,7 +27,6 @@ namespace Client_Shiplink.DummyDataSaveBox
                 },
                 new SavedBoxSize
                 {
-                    Name = "Username",
                     Pict = "Photo Frame",
                     Size = "8x9x10",
                     Weight = "0.5",
@@ -37,7 +34,6 @@ namespace Client_Shiplink.DummyDataSaveBox
                 },
                 new SavedBoxSize
                 {
-                    Name = "Username",
                     Pict = "Photo Frame",
                     Size = "8x9x10",
                     Weight = "0.5",
@@ -45,7 +41,6 @@ namespace Client_Shiplink.DummyDataSaveBox
                 },
                 new SavedBoxSize
                 {
-                    Name = "Username",
                     Pict = "Photo Frame",
                     Size = "8x9x10",
                     Weight = "0.5",
@@ -53,7 +48,6 @@ namespace Client_Shiplink.DummyDataSaveBox
                 },
                 new SavedBoxSize
                 {
-                    Name = "Username",
                     Pict = "Photo Frame",
                     Size = "8x9x10",
                     Weight = "0.5",

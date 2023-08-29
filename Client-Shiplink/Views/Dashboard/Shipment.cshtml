@@ -21,17 +21,33 @@
         </div>
         </div>
         <div class="d-flex gap-3 flex-column">
-    @foreach (var orderDetail in dummyData.Where(od => od.Information == "My Shipment"))
-    {
-        <partial name="../Components/OrderDetailComponents" model="orderDetail" />
-    }
+            @foreach (var orderDetail in dummyData.Where(od => od.Information == "My Shipment"))
+            {
+            <partial name="../Components/OrderDetailComponents" model="orderDetail" />
+            }
         </div>
     </div>
-    <div class="" style="width: 30%; height: 100%;">
+       <div class="" style="width: 30%; height: 100%;" id="dashboardStatus">
+        <div class="w-100 h-100">
     <partial name="../Components/DashboardStatus" />
     </div>
-</div>
+    </div>
 
+    <div class="" style="width: 50%; height: 100%; display:none;" id="inputForward">
+ <partial name="../Components/ForwardComponents" />
+    </div>
+</div>
+<script>
+    const btnForward = document.getElementById('btnForward');
+    const dashboardStatus = document.getElementById('dashboardStatus');
+    const inputForward = document.getElementById("inputForward");
+    // Mendapatkan URL saat ini
+
+    btnForward.addEventListener('click', function()  { 
+        dashboardStatus.style.display="none";
+        inputForward.style.display="block";
+    })
+</script>
 
 
 

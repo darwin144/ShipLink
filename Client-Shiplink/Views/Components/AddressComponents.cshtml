@@ -1,0 +1,17 @@
+@model Client_Shiplink.Models.Address.Address
+<div class="col border rounded p-2">
+     <div class="d-flex gap-2 align-items-center ">
+          <div class="overflow-hidden" style="width: 30px; height: 30px; border-radius: 100%;">
+            <img src="@Model.image" class="w-100 h-100" alt="Flag Country">
+            </div>
+            <h2 class="mt-2">@Model.country</h2>
+        </div>
+        <h3>
+    @Model.name
+        </h3>
+        <div>
+    @Model.street
+        </div>
+        <div>@Model.phone</div>
+        <div>@Model.email</div>
+</div>

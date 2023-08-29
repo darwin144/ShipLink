@@ -1,10 +1,15 @@
 @model Client_Shiplink.Models.SavedBoxSizes.SavedBoxSize
   <div class="p-2 border rounded">
-            <div class="d-flex align-items-center gap-4 justify-content-end  ">
+        <div class="d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center gap-4  ">
                 <div class="text-red-clr">Edit</div>
                 <img src="../Assets/imgdashboard/edit-icons.png" alt="Edit Icons" />
             </div>
-            <h3>@Model.Name</h3>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+</div>
+
+            </div>
             <div>@Model.Pict</div>
             <div>@Model.Size In</div>
             <div>@Model.Weight Ibs</div>
