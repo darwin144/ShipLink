@@ -4,10 +4,15 @@
 
 label {
   font-weight: 600;
+  margin-bottom: 4px;
 }
 .text-red-clr {
   color: #d90429;
 }
+.text-blue-clr {
+  color: #0d509a;
+}
+
 .bg-red-clr {
   background: #d90429;
   color: white;
@@ -54,6 +59,12 @@ h1 {
 h2 {
   font-size: 20px;
 }
+h5 {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 500;
+}
 .second {
   background-position: center;
   background-repeat: no-repeat;
@@ -73,7 +84,4 @@ h2 {
 .img-option {
   width: 30px;
   height: 30px;
-}
-.text-blue-clr {
-  color: #0d509a;
 }
