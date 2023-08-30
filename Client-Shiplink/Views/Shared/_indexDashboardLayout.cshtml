@@ -18,15 +18,15 @@
         <div class="d-flex justify-content-between align-items-center">
             <div class="d-flex text-start" style="gap:20px;">
                 <div class="position-relative overflow-hidden">
-                    <h2><a href="~/Dashboard/" style="text-decoration:none; color: black;">All</a> <span class="px-2 py-1 btn-red-clr rounded h-fit" style="font-size: 16px;">@AllData</span></h2>
+                    <h1><a href="~/Dashboard/" style="text-decoration:none; color: black;">All</a> <span class="px-2 py-1 btn-red-clr rounded h-fit" style="font-size: 16px;">@AllData</span></h1>
                     <div id="all-line" class="w-50 bg-line-red-clr rounded" style="height: 6px;"></div>
                 </div>
                 <div class="position-relative overflow-hidden">
-                    <h2><a href="~/Dashboard/IncomeShipment" style="text-decoration:none; color: black;">Income</a><span class="px-2 py-1 btn-red-clr rounded h-fit" style="font-size: 16px;">@income</span></h2>
+                    <h1><a href="~/Dashboard/IncomeShipment" style="text-decoration:none; color: black;">Income</a><span class="px-2 py-1 btn-red-clr rounded h-fit" style="font-size: 16px;">@income</span></h1>
                     <div id="income-line" class="w-50 bg-line-red-clr rounded" style="height:6px"></div>
                 </div>
                <div class="position-relative overflow-hidden">
-                    <h2><a href="~/Dashboard/OutgoingShipment" style="text-decoration:none; color: black;">Outgoing Shipments</a><span class="px-2 py-1 btn-red-clr rounded h-fit" style="font-size: 16px;">@outgoing</span></h2>
+                    <h1><a href="~/Dashboard/OutgoingShipment" style="text-decoration:none; color: black;">Outgoing </a><span class="px-2 py-1 btn-red-clr rounded h-fit" style="font-size: 16px;">@outgoing</span></h1>
                     <div id="outgoing-line" class="w-50 bg-line-red-clr rounded" style="height:6px"></div>
                 </div>
             </div>
@@ -38,14 +38,14 @@
         <div class="d-flex gap-3 flex-column mt-4">
             @if (!dummyData.Any())
             {
-                                                                                                                                                            <div class="w-100 h-100 d-flex gap-4 flex-column align-items-center justify-content-center">
-                                                                                                                                                                <h1 class="text-red-clr fw-bold" style="font-size: 60px;">ShipLink</h1>
-                                                                                                                                                                <div class="text-center">
-                                                                                                                                                                    <h2 class="fw-semibold">You Dont Have Any Data Display Here</h2>
-                                                                                                                                                                    <h2 class="fw-normal">Start Shipping Today</h2>
-                                                                                                                                                                </div>
-                                                                                                                                                                <button class="btn-red-clr px-2 py-1 rounded">Send Package</button>
-                                                                                                                                                            </div>
+                                                                                                                                                                                <div class="w-100 h-100 d-flex gap-4 flex-column align-items-center justify-content-center">
+                                                                                                                                                                                    <h1 class="text-red-clr fw-bold" style="font-size: 60px;">ShipLink</h1>
+                                                                                                                                                                                    <div class="text-center">
+                                                                                                                                                                                        <h2 class="fw-semibold">You Dont Have Any Data Display Here</h2>
+                                                                                                                                                                                        <h2 class="fw-normal">Start Shipping Today</h2>
+                                                                                                                                                                                    </div>
+                                                                                                                                                                                    <button class="btn-red-clr px-2 py-1 rounded">Send Package</button>
+                                                                                                                                                                                </div>
             }
             else
             {

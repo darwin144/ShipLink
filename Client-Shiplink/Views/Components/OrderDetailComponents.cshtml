@@ -5,9 +5,9 @@
     string textColor;
     string borderColor;
     string display;
-    string backgroundStatusOne;    
-    string backgroundStatusTwo;    
-    string backgroundStatusThree;    
+    string backgroundStatusOne;
+    string backgroundStatusTwo;
+    string backgroundStatusThree;
 
     if (@Model.StatusDelivery == "Ready To Pickup")
     {
@@ -26,16 +26,16 @@
         borderColor = "#3E9EFF";
         display = "none";
         backgroundStatusOne = "#50CD8D";
-         backgroundStatusTwo = "#DEDEDE";
-         backgroundStatusThree = "#DEDEDE";
+        backgroundStatusTwo = "#DEDEDE";
+        backgroundStatusThree = "#DEDEDE";
     }
     else if (@Model.StatusDelivery == "Transit")
     {
         backgroundColor = "#FFECC8";
         textColor = "#FFC149";
         borderColor = "#FFC149";
-         display = "none";
-         backgroundStatusOne = "#50CD8D";
+        display = "none";
+        backgroundStatusOne = "#50CD8D";
         backgroundStatusTwo = "#50CD8D";
         backgroundStatusThree = "#DEDEDE";
     }
@@ -44,20 +44,23 @@
         //Default
         backgroundColor = "#FFFFFF";
         textColor = "#000";
-        borderColor = "#000"; 
-         display = "none";
-            backgroundStatusOne = "#DEDEDE";
-         backgroundStatusTwo = "#DEDEDE";
-         backgroundStatusThree = "#DEDEDE";
+        borderColor = "#000";
+        display = "none";
+        backgroundStatusOne = "#DEDEDE";
+        backgroundStatusTwo = "#DEDEDE";
+        backgroundStatusThree = "#DEDEDE";
     }
 }
 
 @{
     string textInformation;
-    if(@Model.Information == "My Shipment" || @Model.Information == "My Mailbox" ) { 
-        textInformation="#d90429";
-    } else { 
-        textInformation="#05539F";
+    if (@Model.Information == "My Shipment" || @Model.Information == "My Mailbox")
+    {
+        textInformation = "#d90429";
+    }
+    else
+    {
+        textInformation = "#05539F";
     }
 }
 
@@ -72,8 +75,8 @@
                     </div>
                     </div>
                     <div>
-                        <div class="" style="font-size: 20px; font-weight: 600;">@Model.Package</div>
-                        <div style="color: @textInformation;">@Model.Information</div>
+                        <h3 style="font-weight:600;">@Model.Package</h3>
+                        <h3 style="color: @textInformation; font-weight:400;">@Model.Information</h3>
                         <div class="d-flex gap-2 align-items-center justify-content-center">
                             <div>@Model.Delivery</div>
                             <div class="text-red-clr">@Model.Number</div>
@@ -100,7 +103,7 @@
                 <div class="d-flex align-items-center gap-4">
                     <div class="d-flex flex-column gap-2">
 <button class="p-1 rounded" style="background-color: @backgroundColor; border: 1px solid @borderColor; color: @textColor;">
-    @Model.StatusDelivery
+                        @Model.StatusDelivery
 </button>
 
                         <div>@Model.Location</div>
